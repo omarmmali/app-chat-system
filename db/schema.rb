@@ -10,6 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2019_07_17_213102) do
+
+  create_table "client_applications", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.string "identifier_token"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
