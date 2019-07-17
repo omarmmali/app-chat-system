@@ -13,6 +13,7 @@ RSpec.describe "ClientApplications", type: :request do
       json_response_body = JSON.parse(response.body)
       expect(json_response_body["applications"]).to_not be_nil
       expect(json_response_body["applications"].length).to eq(2)
+      expect(json_response_body["applications"][0]["id"])
     end
   end
 end

@@ -1,24 +1,19 @@
-# README
+# APPLICATION CHAT APP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Ruby version 2.6.3
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## System dependencies
+### Docker
+* install [docker](https://docs.docker.com/install/)
+### Docker-compose
+* install [docker-compose](https://docs.docker.com/compose/install/)
+## How to run
+* Get source code   
+```git clone https://github.com/omarmmali/app-chat-system.git && cd app-chat-system```
+* Run   
+```docker-compose up```
+## How to run the test suite
+* Go into the docker application container   
+```docker exec -it rails-chat-app_application_1 /bin/bash```
+* Run   
+```rspec```
