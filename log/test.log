@@ -1215,3 +1215,60 @@ Processing by ClientApplicationsController#index as HTML
   [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT `client_applications`.* FROM `client_applications`[0m
 Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms)
   [1m[35m (2.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', 'XWQ7zuJUXC13Rg', '2019-07-18 08:50:02', '2019-07-18 08:50:02')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.9ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_applications_name', 'iMFfaqvNvVnnBg', '2019-07-18 08:50:02', '2019-07-18 08:50:02')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_applications_name', '5mCbGrYESQjJ2w', '2019-07-18 08:50:02', '2019-07-18 08:50:02')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications" for 127.0.0.1 at 2019-07-18 08:50:02 +0000
+Processing by ClientApplicationsController#index as HTML
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT `client_applications`.* FROM `client_applications`[0m
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.5ms)
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', 'eqsCcyMNpvFxDw', '2019-07-18 08:54:45', '2019-07-18 08:54:45')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_applications_name', 'K7uo-4sfXgUPWQ', '2019-07-18 08:54:45', '2019-07-18 08:54:45')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_applications_name', 't7okLLw7_1ifhQ', '2019-07-18 08:54:45', '2019-07-18 08:54:45')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications" for 127.0.0.1 at 2019-07-18 08:54:45 +0000
+Processing by ClientApplicationsController#index as HTML
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT `client_applications`.* FROM `client_applications`[0m
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (2.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', 'tKLEnQZYyk-xTA', '2019-07-18 08:57:42', '2019-07-18 08:57:42')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (2.1ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_applications_name', 'fkmTmBoWUXr04Q', '2019-07-18 08:57:42', '2019-07-18 08:57:42')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.3ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_applications_name', 'UGUnD_F_Ye4Nyw', '2019-07-18 08:57:42', '2019-07-18 08:57:42')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications" for 127.0.0.1 at 2019-07-18 08:57:42 +0000
+Processing by ClientApplicationsController#index as HTML
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT `client_applications`.* FROM `client_applications`[0m
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.5ms)
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK[0m
