@@ -3439,3 +3439,209 @@ Processing by ClientApplicationsController#update as HTML
   [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'iTDe52cQ7E53vg' LIMIT 1[0m
 Completed 400 Bad Request in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
   [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('248429245097395110', 0)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('248429245097395110')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('248429245097395110', 0)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('248429245097395110')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('248429245097395110', 0)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('248429245097395110')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', 'goHYnAsYPuEEug', '2019-07-18 22:03:35', '2019-07-18 22:03:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.8ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_applications_name', 'iaCmOjYiAYHxWw', '2019-07-18 22:03:36', '2019-07-18 22:03:36')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_applications_name', 'ya2-ynwqz5O_KQ', '2019-07-18 22:03:36', '2019-07-18 22:03:36')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications" for 127.0.0.1 at 2019-07-18 22:03:36 +0000
+Processing by ClientApplicationsController#index as HTML
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT `client_applications`.* FROM `client_applications`[0m
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.6ms)
+  [1m[35m (1.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications" for 127.0.0.1 at 2019-07-18 22:03:36 +0000
+Processing by ClientApplicationsController#create as HTML
+  Parameters: {"name"=>"test_application_name"}
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', 'pQfCzgMNjaf8Ug', '2019-07-18 22:03:36', '2019-07-18 22:03:36')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 4ms (Views: 0.2ms | ActiveRecord: 1.3ms)
+  [1m[35m (1.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.7ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', '6gZxHtYUqV8X6Q', '2019-07-18 22:03:36', '2019-07-18 22:03:36')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications/6gZxHtYUqV8X6Q" for 127.0.0.1 at 2019-07-18 22:03:36 +0000
+Processing by ClientApplicationsController#show as HTML
+  Parameters: {"token"=>"6gZxHtYUqV8X6Q"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '6gZxHtYUqV8X6Q' LIMIT 1[0m
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'riGP9K1YC5v4NA', '2019-07-18 22:03:36', '2019-07-18 22:03:36')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/applications/riGP9K1YC5v4NA" for 127.0.0.1 at 2019-07-18 22:03:36 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"name"=>"new_test_client_application", "token"=>"riGP9K1YC5v4NA"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'riGP9K1YC5v4NA' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Update (0.5ms)[0m  [1m[33mUPDATE `client_applications` SET `name` = 'new_test_client_application' WHERE `client_applications`.`id` = 6[0m
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 6ms (Views: 0.1ms | ActiveRecord: 1.7ms)
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`id` = 6 LIMIT 1[0m
+  [1m[35m (2.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+Started GET "/applications" for 127.0.0.1 at 2019-07-18 22:03:36 +0000
+Processing by ClientApplicationsController#index as HTML
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT `client_applications`.* FROM `client_applications`[0m
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications" for 127.0.0.1 at 2019-07-18 22:03:36 +0000
+Processing by ClientApplicationsController#create as HTML
+Completed 400 Bad Request in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+Started GET "/applications/nonexistent_token" for 127.0.0.1 at 2019-07-18 22:03:36 +0000
+Processing by ClientApplicationsController#show as HTML
+  Parameters: {"token"=>"nonexistent_token"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'nonexistent_token' LIMIT 1[0m
+Completed 404 Not Found in 3ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started PATCH "/applications/nonexistent_token" for 127.0.0.1 at 2019-07-18 22:03:36 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"name"=>"new_application_name", "token"=>"nonexistent_token"}
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'nonexistent_token' LIMIT 1[0m
+Completed 404 Not Found in 2ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.6ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'AUQDvFTb6kdrHw', '2019-07-18 22:03:36', '2019-07-18 22:03:36')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/applications/AUQDvFTb6kdrHw" for 127.0.0.1 at 2019-07-18 22:03:36 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"token"=>"AUQDvFTb6kdrHw"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'AUQDvFTb6kdrHw' LIMIT 1[0m
+Completed 400 Bad Request in 2ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+  [1m[35m (3.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('248429245097395110', 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('248429245097395110')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.3ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', 'oiFvxFifTKNd9Q', '2019-07-18 22:04:23', '2019-07-18 22:04:23')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (1.0ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_applications_name', 'ieOjzl8hfHsIUw', '2019-07-18 22:04:23', '2019-07-18 22:04:23')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.3ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_applications_name', 'GNdnmBQufO-iqw', '2019-07-18 22:04:23', '2019-07-18 22:04:23')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications" for 127.0.0.1 at 2019-07-18 22:04:23 +0000
+Processing by ClientApplicationsController#index as HTML
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT `client_applications`.* FROM `client_applications`[0m
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.5ms)
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications" for 127.0.0.1 at 2019-07-18 22:04:23 +0000
+Processing by ClientApplicationsController#create as HTML
+  Parameters: {"name"=>"test_application_name"}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', 'bJ3caX5Tv9saGA', '2019-07-18 22:04:23', '2019-07-18 22:04:23')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 3ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.6ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'Jm3eBl2u2PdJdQ', '2019-07-18 22:04:23', '2019-07-18 22:04:23')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications/Jm3eBl2u2PdJdQ" for 127.0.0.1 at 2019-07-18 22:04:23 +0000
+Processing by ClientApplicationsController#show as HTML
+  Parameters: {"token"=>"Jm3eBl2u2PdJdQ"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'Jm3eBl2u2PdJdQ' LIMIT 1[0m
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.3ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', '4n2tiEflE2VoFA', '2019-07-18 22:04:23', '2019-07-18 22:04:23')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/applications/4n2tiEflE2VoFA" for 127.0.0.1 at 2019-07-18 22:04:23 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"name"=>"new_test_client_application", "token"=>"4n2tiEflE2VoFA"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '4n2tiEflE2VoFA' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Update (0.4ms)[0m  [1m[33mUPDATE `client_applications` SET `name` = 'new_test_client_application' WHERE `client_applications`.`id` = 6[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 5ms (Views: 0.1ms | ActiveRecord: 1.3ms)
+  [1m[36mClientApplication Load (0.3ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`id` = 6 LIMIT 1[0m
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/applications" for 127.0.0.1 at 2019-07-18 22:04:23 +0000
+Processing by ClientApplicationsController#index as HTML
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT `client_applications`.* FROM `client_applications`[0m
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications" for 127.0.0.1 at 2019-07-18 22:04:23 +0000
+Processing by ClientApplicationsController#create as HTML
+Completed 400 Bad Request in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/applications/nonexistent_token" for 127.0.0.1 at 2019-07-18 22:04:23 +0000
+Processing by ClientApplicationsController#show as HTML
+  Parameters: {"token"=>"nonexistent_token"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'nonexistent_token' LIMIT 1[0m
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started PATCH "/applications/nonexistent_token" for 127.0.0.1 at 2019-07-18 22:04:23 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"name"=>"new_application_name", "token"=>"nonexistent_token"}
+  [1m[36mClientApplication Load (0.3ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'nonexistent_token' LIMIT 1[0m
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.3ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'ahAG8rvqsf0UIw', '2019-07-18 22:04:23', '2019-07-18 22:04:23')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/applications/ahAG8rvqsf0UIw" for 127.0.0.1 at 2019-07-18 22:04:23 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"token"=>"ahAG8rvqsf0UIw"}
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'ahAG8rvqsf0UIw' LIMIT 1[0m
+Completed 400 Bad Request in 2ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+  [1m[35m (1.8ms)[0m  [1m[31mROLLBACK[0m

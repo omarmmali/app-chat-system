@@ -13,7 +13,7 @@ services:
   application:
     build: .
     hostname: rails
-    command: bin/rails server --port 3000 --binding 0.0.0.0
+    command: /entrypoint
     ports:
       - "3000:3000"
     depends_on:
@@ -21,5 +21,7 @@ services:
     volumes:
       - .:/chat_app
     restart: on-failure
+    tty: true
     environment:
       WAIT_HOSTS: db_mysql:3306
+      APPLICATION_PORT: 3000

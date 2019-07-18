@@ -7,8 +7,13 @@ COPY Gemfile* ./
 RUN bundle install
 COPY . .
 
-EXPOSE 3000
+EXPOSE $APPLICATION_PORT
 
 ## Add the wait script to the image
 ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.5.1/wait /wait
 RUN chmod +x /wait
+
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint"]
