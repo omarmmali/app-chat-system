@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   scope '/applications' do
+
     scope ':application_token' do
       get '/', to: 'client_applications#show'
       patch '/', to: 'client_applications#update'
@@ -8,8 +9,13 @@ Rails.application.routes.draw do
       scope '/chats' do
         get '/', to: 'application_chats#index'
         post '/', to: 'application_chats#create'
-        get '/:chat_number', to: 'application_chats#show'
-        patch '/:chat_number', to: 'application_chats#update'
+
+        scope ':chat_number' do
+          get '/', to: 'application_chats#show'
+          patch '/', to: 'application_chats#update'
+
+          get '/messages', to: 'chat_messages#index'
+        end
       end
 
     end

@@ -1,6 +1,8 @@
 class ApplicationChatsController < ApplicationController
   def index
     parent_application = ClientApplication.find_by_identifier_token(params[:application_token])
+    handle_invalid_app_token and return unless parent_application
+
     application_chats = parent_application.chats
     render status: :ok, json: {:chats => application_chats}
   end

@@ -70,12 +70,19 @@ RSpec.describe "ClientApplicationsChats", type: :request do
   describe "Unhappy Scenarios" do
     describe "GET /applications/:application_token/chats" do
       it "returns an empty response when client application has no chats" do
-
         get chats_url_for(@client_application.identifier_token)
 
         expect(response).to have_http_status(200)
         json_response = JSON.parse(response.body)
         expect(json_response["chats"].length).to eq(0)
+      end
+
+      it "returns bad request when given a non existent application token" do
+        get chats_url_for("nonexistent_token")
+
+        expect(response).to have_http_status(400)
+        expect(response.body).to_not be_nil
+        expect(response.body).to eq("Invalid application token")
       end
     end
 
