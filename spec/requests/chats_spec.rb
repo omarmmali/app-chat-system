@@ -1,14 +1,21 @@
 require 'rails_helper'
 
+def chats_url_for(application_token)
+  "/applications/#{application_token}/chats"
+end
+
 RSpec.describe "ClientApplicationsChats", type: :request do
+  before(:each) do
+    @client_application = ClientApplication.create(:name => "test_client_application")
+  end
+
   describe "Happy Scenarios" do
     describe "GET /applications/:application_token/chats" do
       it "returns all chats that belong to an application" do
-        client_application = ClientApplication.create(:name => "test_client_application")
-        client_application.chats.create
-        client_application.chats.create
+        @client_application.chats.create
+        @client_application.chats.create
 
-        get "/applications/#{client_application.identifier_token}/chats"
+        get chats_url_for(@client_application.identifier_token)
 
         expect(response).to have_http_status(200)
         json_response = JSON.parse(response.body)
@@ -21,11 +28,23 @@ RSpec.describe "ClientApplicationsChats", type: :request do
       end
     end
 
+    describe "GET /applications/:application_token/chats/:chat_number" do
+      it "returns the chat with the given chat number" do
+        application_chat = @client_application.chats.create
+
+        get "#{chats_url_for(@client_application.identifier_token)}/#{application_chat.identifier_number}"
+
+        expect(response).to have_http_status(200)
+        json_response = JSON.parse(response.body)
+        expect(json_response["chat"]).to_not be_nil
+        expect(json_response["chat"]["id"]).to be_nil
+      end
+    end
+
     describe "POST /applications/:application_token/chats" do
       it "creates a chat for the given application" do
-        client_application = ClientApplication.create(:name => "test_client_application")
 
-        post "/applications/#{client_application.identifier_token}/chats"
+        post chats_url_for(@client_application.identifier_token)
 
         expect(response).to have_http_status(201)
         json_response = JSON.parse(response.body)
@@ -37,12 +56,9 @@ RSpec.describe "ClientApplicationsChats", type: :request do
 
     describe "PATCH /applications/:application_token/chats/:chat_number" do
       it "updates chat" do
-        client_application = ClientApplication.create(:name => "test_client_application")
-        application_chat = client_application.chats.create(:modifiable_attribute => "old value")
+        application_chat = @client_application.chats.create(:modifiable_attribute => "old value")
         request_body = {:chat => {:modifiable_attribute => "new value"}}
-        request_url = "/applications/#{client_application.identifier_token}/chats/#{application_chat.identifier_number}"
-
-        patch request_url, params: request_body
+        patch "#{chats_url_for(@client_application.identifier_token)}/#{application_chat.identifier_number}", params: request_body
 
         expect(response).to have_http_status(204)
         application_chat.reload
@@ -54,13 +70,34 @@ RSpec.describe "ClientApplicationsChats", type: :request do
   describe "Unhappy Scenarios" do
     describe "GET /applications/:application_token/chats" do
       it "returns an empty response when client application has no chats" do
-        client_application = ClientApplication.create(:name => "test_client_application")
 
-        get "/applications/#{client_application.identifier_token}/chats"
+        get chats_url_for(@client_application.identifier_token)
 
         expect(response).to have_http_status(200)
         json_response = JSON.parse(response.body)
         expect(json_response["chats"].length).to eq(0)
+      end
+    end
+
+    describe "GET /applications/:application_token/chats/:chat_number" do
+      it "returns bad request when given a non existent application token" do
+        application_chat = @client_application.chats.create(:modifiable_attribute => "old value")
+
+        get "#{chats_url_for("nonexistent_token")}/#{application_chat.identifier_number}"
+
+        expect(response).to have_http_status(400)
+        expect(response.body).to_not be_nil
+        expect(response.body).to eq("Invalid application token")
+      end
+
+      it "returns bad request when given a non existent chat number" do
+        @client_application.chats.create(:modifiable_attribute => "old value")
+
+        get "#{chats_url_for(@client_application.identifier_token)}/nonexistent_number"
+
+        expect(response).to have_http_status(400)
+        expect(response.body).to_not be_nil
+        expect(response.body).to eq("Invalid chat number")
       end
     end
 
@@ -76,12 +113,9 @@ RSpec.describe "ClientApplicationsChats", type: :request do
 
     describe "PATCH /applications/:application_token/chats/:chat_number" do
       it "returns bad request when given a non existent application token" do
-        client_application = ClientApplication.create(:name => "test_client_application")
-        application_chat = client_application.chats.create(:modifiable_attribute => "old value")
+        application_chat = @client_application.chats.create(:modifiable_attribute => "old value")
         request_body = {:chat => {:modifiable_attribute => "new value"}}
-        request_url = "/applications/nonexistent_token/chats/#{application_chat.identifier_number}"
-
-        patch request_url, params: request_body
+        patch "#{chats_url_for("nonexistent_token")}/#{application_chat.identifier_number}", params: request_body
 
         expect(response).to have_http_status(400)
         expect(response.body).to_not be_nil
@@ -89,12 +123,9 @@ RSpec.describe "ClientApplicationsChats", type: :request do
       end
 
       it "returns bad request when given a non existent chat number" do
-        client_application = ClientApplication.create(:name => "test_client_application")
-        client_application.chats.create(:modifiable_attribute => "old value")
+        @client_application.chats.create(:modifiable_attribute => "old value")
         request_body = {:chat => {:modifiable_attribute => "new value"}}
-        request_url = "/applications/#{client_application.identifier_token}/chats/nonexistent_number"
-
-        patch request_url, params: request_body
+        patch "#{chats_url_for(@client_application.identifier_token)}/nonexistent_number", params: request_body
 
         expect(response).to have_http_status(400)
         expect(response.body).to_not be_nil

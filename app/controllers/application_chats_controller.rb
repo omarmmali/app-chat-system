@@ -24,6 +24,16 @@ class ApplicationChatsController < ApplicationController
     render status: :no_content
   end
 
+  def show
+    parent_application = ClientApplication.find_by_identifier_token(params[:application_token])
+    handle_invalid_app_token and return unless parent_application
+
+    application_chat = parent_application.chats.find_by(:identifier_number => params[:chat_number])
+    handle_invalid_chat_number and return unless application_chat
+
+    render status: :ok, json: {:chat => application_chat}
+  end
+
   private
 
   def handle_invalid_chat_number
