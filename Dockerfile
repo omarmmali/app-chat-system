@@ -8,12 +8,13 @@ RUN bundle install
 COPY . .
 
 EXPOSE $APPLICATION_PORT
+EXPOSE $DEBUGGING_PORT
 
 ## Add the wait script to the image
-ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.5.1/wait /wait
-RUN chmod +x /wait
+COPY wait.sh /wait.sh
+RUN chmod +x /wait.sh
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
-ENTRYPOINT ["/entrypoint"]
+ENTRYPOINT ["/entrypoint.sh"]

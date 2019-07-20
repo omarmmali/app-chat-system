@@ -1,11 +1,6 @@
 class ClientApplicationsController < ApplicationController
   rescue_from ActionController::ParameterMissing, with: :handle_missing_parameter
 
-  def index
-    client_applications = ClientApplication.all
-    render status: :ok, json: {:applications => client_applications}
-  end
-
   def create
     client_application = ClientApplication.new(:name => client_application_params)
     client_application.save
@@ -13,7 +8,7 @@ class ClientApplicationsController < ApplicationController
   end
 
   def show
-    client_application = ClientApplication.find_by_identifier_token(params[:token])
+    client_application = ClientApplication.find_by_identifier_token(params[:application_token])
     if client_application
       render status: :ok, json: {:application => client_application}
     else
@@ -22,7 +17,7 @@ class ClientApplicationsController < ApplicationController
   end
 
   def update
-    client_application = ClientApplication.find_by_identifier_token(params[:token])
+    client_application = ClientApplication.find_by_identifier_token(params[:application_token])
     if client_application
       client_application.update(:name => client_application_params)
       render status: :no_content

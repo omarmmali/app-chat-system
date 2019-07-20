@@ -1,22 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe "ClientApplications", type: :request do
-  describe "GET /applications" do
-    it "gets all client applications" do
-      application_name = "test_applications_name"
-      ClientApplication.create(:name => application_name)
-      ClientApplication.create(:name => application_name)
-
-      get "/applications"
-
-      expect(response).to have_http_status(200)
-      json_response_body = JSON.parse(response.body)
-      expect(json_response_body["applications"]).to_not be_nil
-      expect(json_response_body["applications"].length).to eq(2)
-      expect(json_response_body["applications"][0]["id"]).to be_nil
-    end
-  end
-
   describe "POST /applications" do
     it "creates an application" do
       application_name = "test_application_name"
@@ -31,7 +15,7 @@ RSpec.describe "ClientApplications", type: :request do
     end
   end
 
-  describe "GET /applications/:token" do
+  describe "GET /applications/:application_token" do
     it "gets a client application by identifier token" do
       application_name = "test_client_application"
       current_client_application = ClientApplication.create(:name => application_name)
@@ -47,7 +31,7 @@ RSpec.describe "ClientApplications", type: :request do
     end
   end
 
-  describe "PATCH /applications/:token" do
+  describe "PATCH /applications/:application_token" do
     it "edits a client application" do
       application_name = "test_client_application"
       current_client_application = ClientApplication.create(:name => application_name)
@@ -63,17 +47,6 @@ RSpec.describe "ClientApplications", type: :request do
 end
 
 RSpec.describe "ClientApplications Unhappy Scenarios", type: :request do
-  describe "GET /applications" do
-    it "no applications exist" do
-      get "/applications"
-
-      expect(response).to have_http_status(200)
-      json_response_body = JSON.parse(response.body)
-      expect(json_response_body["applications"]).to_not be_nil
-      expect(json_response_body["applications"].length).to eq(0)
-    end
-  end
-
   describe "POST /applications" do
     it "not given a name" do
       post "/applications", params: {}
@@ -82,7 +55,7 @@ RSpec.describe "ClientApplications Unhappy Scenarios", type: :request do
     end
   end
 
-  describe "GET /applications/:token" do
+  describe "GET /applications/:application_token" do
     it "given a nonexistent identifier_token" do
       get "/applications/nonexistent_token"
 
@@ -91,7 +64,7 @@ RSpec.describe "ClientApplications Unhappy Scenarios", type: :request do
     end
   end
 
-  describe "PATCH /applications/:token" do
+  describe "PATCH /applications/:application_token" do
     it "given a nonexistent token" do
       patch "/applications/nonexistent_token", params: {:name => "new_application_name"}
 

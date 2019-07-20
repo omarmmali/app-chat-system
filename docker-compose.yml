@@ -13,15 +13,16 @@ services:
   application:
     build: .
     hostname: rails
-    command: /entrypoint
+    command: /entrypoint.sh
     ports:
       - "3000:3000"
+      - "1234:1234"
     depends_on:
       - db_mysql
     volumes:
       - .:/chat_app
-    restart: on-failure
     tty: true
     environment:
       WAIT_HOSTS: db_mysql:3306
       APPLICATION_PORT: 3000
+      DEBUGGING_PORT: 1234
