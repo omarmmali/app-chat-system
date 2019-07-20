@@ -7294,3 +7294,1601 @@ Processing by ClientApplicationsController#update as HTML
   [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'uAESEluGttVDrQ' LIMIT 1[0m
 Completed 400 Bad Request in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
   [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClientApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'Ih84fmb0m4_hNg', '2019-07-20 08:14:24', '2019-07-20 08:14:24')[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.7ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', '1_S21zuKx1yvqQ', '2019-07-20 08:14:58', '2019-07-20 08:14:58')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 213[0m
+  [1m[36mApplicationChat Create (0.3ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (213, 1, '2019-07-20 08:14:58', '2019-07-20 08:14:58')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', 'VaO_EFd_cQPP0Q', '2019-07-20 08:14:58', '2019-07-20 08:14:58')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'oKCEsuOwiiOelQ', '2019-07-20 08:14:58', '2019-07-20 08:14:58')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 215[0m
+  [1m[36mApplicationChat Create (0.4ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (215, 1, '2019-07-20 08:14:58', '2019-07-20 08:14:58')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 215[0m
+  [1m[36mApplicationChat Create (0.3ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (215, 2, '2019-07-20 08:14:58', '2019-07-20 08:14:58')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications/oKCEsuOwiiOelQ/chats" for 127.0.0.1 at 2019-07-20 08:14:58 +0000
+Processing by ApplicationChatsController#index as HTML
+  Parameters: {"application_token"=>"oKCEsuOwiiOelQ"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'oKCEsuOwiiOelQ' LIMIT 1[0m
+  [1m[36mApplicationChat Load (0.4ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 215[0m
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 1.0ms)
+  [1m[35m (2.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', '8cEjSZi_5VHSnQ', '2019-07-20 08:14:58', '2019-07-20 08:14:58')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/applications/8cEjSZi_5VHSnQ/chats" for 127.0.0.1 at 2019-07-20 08:14:58 +0000
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications" for 127.0.0.1 at 2019-07-20 08:14:58 +0000
+Processing by ClientApplicationsController#create as HTML
+  Parameters: {"name"=>"test_application_name"}
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', 'HNGh9TP-WluxCw', '2019-07-20 08:14:58', '2019-07-20 08:14:58')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 4ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', '33HcLyBQiMmYog', '2019-07-20 08:14:58', '2019-07-20 08:14:58')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications/33HcLyBQiMmYog" for 127.0.0.1 at 2019-07-20 08:14:58 +0000
+Processing by ClientApplicationsController#show as HTML
+  Parameters: {"application_token"=>"33HcLyBQiMmYog"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '33HcLyBQiMmYog' LIMIT 1[0m
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', '1un2tn0o8DwpXA', '2019-07-20 08:14:58', '2019-07-20 08:14:58')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/applications/1un2tn0o8DwpXA" for 127.0.0.1 at 2019-07-20 08:14:58 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"name"=>"new_test_client_application", "application_token"=>"1un2tn0o8DwpXA"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '1un2tn0o8DwpXA' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Update (0.5ms)[0m  [1m[33mUPDATE `client_applications` SET `name` = 'new_test_client_application' WHERE `client_applications`.`id` = 219[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 5ms (Views: 0.1ms | ActiveRecord: 1.5ms)
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`id` = 219 LIMIT 1[0m
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications" for 127.0.0.1 at 2019-07-20 08:14:58 +0000
+Processing by ClientApplicationsController#create as HTML
+Completed 400 Bad Request in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started GET "/applications/nonexistent_token" for 127.0.0.1 at 2019-07-20 08:14:58 +0000
+Processing by ClientApplicationsController#show as HTML
+  Parameters: {"application_token"=>"nonexistent_token"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'nonexistent_token' LIMIT 1[0m
+Completed 404 Not Found in 2ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started PATCH "/applications/nonexistent_token" for 127.0.0.1 at 2019-07-20 08:14:58 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"name"=>"new_application_name", "application_token"=>"nonexistent_token"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'nonexistent_token' LIMIT 1[0m
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.3ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'iOwFBSxBZ_C22Q', '2019-07-20 08:14:58', '2019-07-20 08:14:58')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/applications/iOwFBSxBZ_C22Q" for 127.0.0.1 at 2019-07-20 08:14:58 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"application_token"=>"iOwFBSxBZ_C22Q"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'iOwFBSxBZ_C22Q' LIMIT 1[0m
+Completed 400 Bad Request in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.6ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'qGcoS0tgV9JGWg', '2019-07-20 08:15:28', '2019-07-20 08:15:28')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 221[0m
+  [1m[36mApplicationChat Create (0.3ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (221, 1, '2019-07-20 08:15:28', '2019-07-20 08:15:28')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', '85VYrx8zVoqn1w', '2019-07-20 08:15:28', '2019-07-20 08:15:28')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'GTk_qDjAwO4qkg', '2019-07-20 08:15:28', '2019-07-20 08:15:28')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 223[0m
+  [1m[36mApplicationChat Create (0.7ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (223, 1, '2019-07-20 08:15:28', '2019-07-20 08:15:28')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 223[0m
+  [1m[36mApplicationChat Create (0.4ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (223, 2, '2019-07-20 08:15:28', '2019-07-20 08:15:28')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications/GTk_qDjAwO4qkg/chats" for 127.0.0.1 at 2019-07-20 08:15:28 +0000
+Processing by ApplicationChatsController#index as HTML
+  Parameters: {"application_token"=>"GTk_qDjAwO4qkg"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'GTk_qDjAwO4qkg' LIMIT 1[0m
+  [1m[36mApplicationChat Load (0.5ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 223[0m
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 1.0ms)
+  [1m[35m (1.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', '9Sqd4qDAeHzhOw', '2019-07-20 08:15:28', '2019-07-20 08:15:28')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/applications/9Sqd4qDAeHzhOw/chats" for 127.0.0.1 at 2019-07-20 08:15:28 +0000
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications" for 127.0.0.1 at 2019-07-20 08:15:28 +0000
+Processing by ClientApplicationsController#create as HTML
+  Parameters: {"name"=>"test_application_name"}
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', 'hBPxr4BNsVuGWA', '2019-07-20 08:15:28', '2019-07-20 08:15:28')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 4ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'cCEauGqp2M844A', '2019-07-20 08:15:28', '2019-07-20 08:15:28')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications/cCEauGqp2M844A" for 127.0.0.1 at 2019-07-20 08:15:28 +0000
+Processing by ClientApplicationsController#show as HTML
+  Parameters: {"application_token"=>"cCEauGqp2M844A"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'cCEauGqp2M844A' LIMIT 1[0m
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (2.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'xPM6rVhVie0cqg', '2019-07-20 08:15:28', '2019-07-20 08:15:28')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/applications/xPM6rVhVie0cqg" for 127.0.0.1 at 2019-07-20 08:15:28 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"name"=>"new_test_client_application", "application_token"=>"xPM6rVhVie0cqg"}
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'xPM6rVhVie0cqg' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Update (0.4ms)[0m  [1m[33mUPDATE `client_applications` SET `name` = 'new_test_client_application' WHERE `client_applications`.`id` = 227[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 4ms (Views: 0.1ms | ActiveRecord: 1.5ms)
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`id` = 227 LIMIT 1[0m
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications" for 127.0.0.1 at 2019-07-20 08:15:28 +0000
+Processing by ClientApplicationsController#create as HTML
+Completed 400 Bad Request in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/applications/nonexistent_token" for 127.0.0.1 at 2019-07-20 08:15:28 +0000
+Processing by ClientApplicationsController#show as HTML
+  Parameters: {"application_token"=>"nonexistent_token"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'nonexistent_token' LIMIT 1[0m
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started PATCH "/applications/nonexistent_token" for 127.0.0.1 at 2019-07-20 08:15:28 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"name"=>"new_application_name", "application_token"=>"nonexistent_token"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'nonexistent_token' LIMIT 1[0m
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', '09AQSl7O-oyRKQ', '2019-07-20 08:15:28', '2019-07-20 08:15:28')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/applications/09AQSl7O-oyRKQ" for 127.0.0.1 at 2019-07-20 08:15:28 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"application_token"=>"09AQSl7O-oyRKQ"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '09AQSl7O-oyRKQ' LIMIT 1[0m
+Completed 400 Bad Request in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'mCGZBn_U2fsNOA', '2019-07-20 08:15:53', '2019-07-20 08:15:53')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 229[0m
+  [1m[36mApplicationChat Create (0.7ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (229, 1, '2019-07-20 08:15:53', '2019-07-20 08:15:53')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.6ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', 'v-u5iS2wI4FGJw', '2019-07-20 08:15:53', '2019-07-20 08:15:53')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'Qh7McsVlmYthSQ', '2019-07-20 08:15:53', '2019-07-20 08:15:53')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 231[0m
+  [1m[36mApplicationChat Create (0.3ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (231, 1, '2019-07-20 08:15:53', '2019-07-20 08:15:53')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 231[0m
+  [1m[36mApplicationChat Create (0.4ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (231, 2, '2019-07-20 08:15:53', '2019-07-20 08:15:53')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications/Qh7McsVlmYthSQ/chats" for 127.0.0.1 at 2019-07-20 08:15:53 +0000
+Processing by ApplicationChatsController#index as HTML
+  Parameters: {"application_token"=>"Qh7McsVlmYthSQ"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'Qh7McsVlmYthSQ' LIMIT 1[0m
+  [1m[36mApplicationChat Load (0.5ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 231[0m
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 1.0ms)
+  [1m[35m (2.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'Rbjq-Z4PtZ2Blw', '2019-07-20 08:15:53', '2019-07-20 08:15:53')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/applications/Rbjq-Z4PtZ2Blw/chats" for 127.0.0.1 at 2019-07-20 08:15:53 +0000
+Processing by ApplicationChatsController#create as HTML
+  Parameters: {"application_token"=>"Rbjq-Z4PtZ2Blw"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (1.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications" for 127.0.0.1 at 2019-07-20 08:15:54 +0000
+Processing by ClientApplicationsController#create as HTML
+  Parameters: {"name"=>"test_application_name"}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', 'Wby9-qPbgEbxPg', '2019-07-20 08:15:54', '2019-07-20 08:15:54')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 4ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'uMqP37wDBLtaZw', '2019-07-20 08:15:54', '2019-07-20 08:15:54')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications/uMqP37wDBLtaZw" for 127.0.0.1 at 2019-07-20 08:15:54 +0000
+Processing by ClientApplicationsController#show as HTML
+  Parameters: {"application_token"=>"uMqP37wDBLtaZw"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'uMqP37wDBLtaZw' LIMIT 1[0m
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.3ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'H_5af9Lfx7LB7Q', '2019-07-20 08:15:54', '2019-07-20 08:15:54')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/applications/H_5af9Lfx7LB7Q" for 127.0.0.1 at 2019-07-20 08:15:54 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"name"=>"new_test_client_application", "application_token"=>"H_5af9Lfx7LB7Q"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'H_5af9Lfx7LB7Q' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Update (0.5ms)[0m  [1m[33mUPDATE `client_applications` SET `name` = 'new_test_client_application' WHERE `client_applications`.`id` = 235[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 5ms (Views: 0.1ms | ActiveRecord: 1.5ms)
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`id` = 235 LIMIT 1[0m
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications" for 127.0.0.1 at 2019-07-20 08:15:54 +0000
+Processing by ClientApplicationsController#create as HTML
+Completed 400 Bad Request in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/applications/nonexistent_token" for 127.0.0.1 at 2019-07-20 08:15:54 +0000
+Processing by ClientApplicationsController#show as HTML
+  Parameters: {"application_token"=>"nonexistent_token"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'nonexistent_token' LIMIT 1[0m
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started PATCH "/applications/nonexistent_token" for 127.0.0.1 at 2019-07-20 08:15:54 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"name"=>"new_application_name", "application_token"=>"nonexistent_token"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'nonexistent_token' LIMIT 1[0m
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'miLD2QJJYyZUig', '2019-07-20 08:15:54', '2019-07-20 08:15:54')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/applications/miLD2QJJYyZUig" for 127.0.0.1 at 2019-07-20 08:15:54 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"application_token"=>"miLD2QJJYyZUig"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'miLD2QJJYyZUig' LIMIT 1[0m
+Completed 400 Bad Request in 2ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'fyPpwZRuBPylbw', '2019-07-20 08:17:15', '2019-07-20 08:17:15')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 237[0m
+  [1m[36mApplicationChat Create (0.5ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (237, 1, '2019-07-20 08:17:15', '2019-07-20 08:17:15')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.6ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', 'Pt1ut8KaHBBdvQ', '2019-07-20 08:17:15', '2019-07-20 08:17:15')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'XQcdY3rbokXYDA', '2019-07-20 08:17:15', '2019-07-20 08:17:15')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 239[0m
+  [1m[36mApplicationChat Create (0.6ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (239, 1, '2019-07-20 08:17:15', '2019-07-20 08:17:15')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 239[0m
+  [1m[36mApplicationChat Create (0.4ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (239, 2, '2019-07-20 08:17:15', '2019-07-20 08:17:15')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications/XQcdY3rbokXYDA/chats" for 127.0.0.1 at 2019-07-20 08:17:15 +0000
+Processing by ApplicationChatsController#index as HTML
+  Parameters: {"application_token"=>"XQcdY3rbokXYDA"}
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'XQcdY3rbokXYDA' LIMIT 1[0m
+  [1m[36mApplicationChat Load (0.5ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 239[0m
+Completed 200 OK in 7ms (Views: 1.8ms | ActiveRecord: 1.1ms)
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'Tg8QKpDfxBC41A', '2019-07-20 08:17:15', '2019-07-20 08:17:15')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/applications/Tg8QKpDfxBC41A/chats" for 127.0.0.1 at 2019-07-20 08:17:15 +0000
+Processing by ApplicationChatsController#create as HTML
+  Parameters: {"application_token"=>"Tg8QKpDfxBC41A"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'Tg8QKpDfxBC41A' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 240[0m
+  [1m[36mApplicationChat Create (0.5ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (240, 1, '2019-07-20 08:17:15', '2019-07-20 08:17:15')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 7ms (Views: 0.3ms | ActiveRecord: 2.2ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 240[0m
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications" for 127.0.0.1 at 2019-07-20 08:17:15 +0000
+Processing by ClientApplicationsController#create as HTML
+  Parameters: {"name"=>"test_application_name"}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', '2TyL4ov3_ARV9Q', '2019-07-20 08:17:15', '2019-07-20 08:17:15')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 3ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'E-EAA9rXfEkDrg', '2019-07-20 08:17:15', '2019-07-20 08:17:15')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications/E-EAA9rXfEkDrg" for 127.0.0.1 at 2019-07-20 08:17:15 +0000
+Processing by ClientApplicationsController#show as HTML
+  Parameters: {"application_token"=>"E-EAA9rXfEkDrg"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'E-EAA9rXfEkDrg' LIMIT 1[0m
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (1.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'DcRVUS0bTejMWw', '2019-07-20 08:17:15', '2019-07-20 08:17:15')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/applications/DcRVUS0bTejMWw" for 127.0.0.1 at 2019-07-20 08:17:15 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"name"=>"new_test_client_application", "application_token"=>"DcRVUS0bTejMWw"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'DcRVUS0bTejMWw' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Update (0.4ms)[0m  [1m[33mUPDATE `client_applications` SET `name` = 'new_test_client_application' WHERE `client_applications`.`id` = 243[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 4ms (Views: 0.1ms | ActiveRecord: 1.4ms)
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`id` = 243 LIMIT 1[0m
+  [1m[35m (1.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications" for 127.0.0.1 at 2019-07-20 08:17:15 +0000
+Processing by ClientApplicationsController#create as HTML
+Completed 400 Bad Request in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started GET "/applications/nonexistent_token" for 127.0.0.1 at 2019-07-20 08:17:15 +0000
+Processing by ClientApplicationsController#show as HTML
+  Parameters: {"application_token"=>"nonexistent_token"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'nonexistent_token' LIMIT 1[0m
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Started PATCH "/applications/nonexistent_token" for 127.0.0.1 at 2019-07-20 08:17:15 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"name"=>"new_application_name", "application_token"=>"nonexistent_token"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'nonexistent_token' LIMIT 1[0m
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.3ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'yFOcIilWwVB8Mw', '2019-07-20 08:17:15', '2019-07-20 08:17:15')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/applications/yFOcIilWwVB8Mw" for 127.0.0.1 at 2019-07-20 08:17:15 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"application_token"=>"yFOcIilWwVB8Mw"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'yFOcIilWwVB8Mw' LIMIT 1[0m
+Completed 400 Bad Request in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'd5X-GDxFBR_GPg', '2019-07-20 08:17:29', '2019-07-20 08:17:29')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 245[0m
+  [1m[36mApplicationChat Create (0.4ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (245, 1, '2019-07-20 08:17:30', '2019-07-20 08:17:30')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.3ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', 'RzT_UQgwnM4gkQ', '2019-07-20 08:17:30', '2019-07-20 08:17:30')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'd99X3wpWyhxNvg', '2019-07-20 08:17:30', '2019-07-20 08:17:30')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 247[0m
+  [1m[36mApplicationChat Create (0.3ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (247, 1, '2019-07-20 08:17:30', '2019-07-20 08:17:30')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 247[0m
+  [1m[36mApplicationChat Create (0.3ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (247, 2, '2019-07-20 08:17:30', '2019-07-20 08:17:30')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications/d99X3wpWyhxNvg/chats" for 127.0.0.1 at 2019-07-20 08:17:30 +0000
+Processing by ApplicationChatsController#index as HTML
+  Parameters: {"application_token"=>"d99X3wpWyhxNvg"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'd99X3wpWyhxNvg' LIMIT 1[0m
+  [1m[36mApplicationChat Load (0.4ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 247[0m
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 0.9ms)
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.3ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'VX3WpQzNM97W6g', '2019-07-20 08:17:30', '2019-07-20 08:17:30')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/applications/VX3WpQzNM97W6g/chats" for 127.0.0.1 at 2019-07-20 08:17:30 +0000
+Processing by ApplicationChatsController#create as HTML
+  Parameters: {"application_token"=>"VX3WpQzNM97W6g"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'VX3WpQzNM97W6g' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 248[0m
+  [1m[36mApplicationChat Create (0.3ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (248, 1, '2019-07-20 08:17:30', '2019-07-20 08:17:30')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 6ms (Views: 0.3ms | ActiveRecord: 1.6ms)
+  [1m[35m (1.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications" for 127.0.0.1 at 2019-07-20 08:17:30 +0000
+Processing by ClientApplicationsController#create as HTML
+  Parameters: {"name"=>"test_application_name"}
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', 'oSEfa2vLFYU_ZA', '2019-07-20 08:17:30', '2019-07-20 08:17:30')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 4ms (Views: 0.4ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'pKC8bWvopjHNmw', '2019-07-20 08:17:30', '2019-07-20 08:17:30')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications/pKC8bWvopjHNmw" for 127.0.0.1 at 2019-07-20 08:17:30 +0000
+Processing by ClientApplicationsController#show as HTML
+  Parameters: {"application_token"=>"pKC8bWvopjHNmw"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'pKC8bWvopjHNmw' LIMIT 1[0m
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.3ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'X-Ri2-HOiFakQQ', '2019-07-20 08:17:30', '2019-07-20 08:17:30')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/applications/X-Ri2-HOiFakQQ" for 127.0.0.1 at 2019-07-20 08:17:30 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"name"=>"new_test_client_application", "application_token"=>"X-Ri2-HOiFakQQ"}
+  [1m[36mClientApplication Load (0.3ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'X-Ri2-HOiFakQQ' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Update (0.4ms)[0m  [1m[33mUPDATE `client_applications` SET `name` = 'new_test_client_application' WHERE `client_applications`.`id` = 251[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 4ms (Views: 0.1ms | ActiveRecord: 1.1ms)
+  [1m[36mClientApplication Load (0.3ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`id` = 251 LIMIT 1[0m
+  [1m[35m (1.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications" for 127.0.0.1 at 2019-07-20 08:17:30 +0000
+Processing by ClientApplicationsController#create as HTML
+Completed 400 Bad Request in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/applications/nonexistent_token" for 127.0.0.1 at 2019-07-20 08:17:30 +0000
+Processing by ClientApplicationsController#show as HTML
+  Parameters: {"application_token"=>"nonexistent_token"}
+  [1m[36mClientApplication Load (0.3ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'nonexistent_token' LIMIT 1[0m
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started PATCH "/applications/nonexistent_token" for 127.0.0.1 at 2019-07-20 08:17:30 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"name"=>"new_application_name", "application_token"=>"nonexistent_token"}
+  [1m[36mClientApplication Load (0.3ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'nonexistent_token' LIMIT 1[0m
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.3ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'VqbiAn1KKaYsLw', '2019-07-20 08:17:30', '2019-07-20 08:17:30')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/applications/VqbiAn1KKaYsLw" for 127.0.0.1 at 2019-07-20 08:17:30 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"application_token"=>"VqbiAn1KKaYsLw"}
+  [1m[36mClientApplication Load (0.3ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'VqbiAn1KKaYsLw' LIMIT 1[0m
+Completed 400 Bad Request in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'tf-e7Kv3S328gA', '2019-07-20 08:18:21', '2019-07-20 08:18:21')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 253[0m
+  [1m[36mApplicationChat Create (0.4ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (253, 1, '2019-07-20 08:18:21', '2019-07-20 08:18:21')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.3ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', 'LDKBJx7hYkFZEg', '2019-07-20 08:18:21', '2019-07-20 08:18:21')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'q21gClrx8SPaCQ', '2019-07-20 08:18:21', '2019-07-20 08:18:21')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 255[0m
+  [1m[36mApplicationChat Create (0.4ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (255, 1, '2019-07-20 08:18:21', '2019-07-20 08:18:21')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.8ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 255[0m
+  [1m[36mApplicationChat Create (0.4ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (255, 2, '2019-07-20 08:18:21', '2019-07-20 08:18:21')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications/q21gClrx8SPaCQ/chats" for 127.0.0.1 at 2019-07-20 08:18:21 +0000
+Processing by ApplicationChatsController#index as HTML
+  Parameters: {"application_token"=>"q21gClrx8SPaCQ"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'q21gClrx8SPaCQ' LIMIT 1[0m
+  [1m[36mApplicationChat Load (0.4ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 255[0m
+Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 1.0ms)
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.3ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'yi3fSj7sWL1N_A', '2019-07-20 08:18:21', '2019-07-20 08:18:21')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/applications/yi3fSj7sWL1N_A/chats" for 127.0.0.1 at 2019-07-20 08:18:21 +0000
+Processing by ApplicationChatsController#create as HTML
+  Parameters: {"application_token"=>"yi3fSj7sWL1N_A"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'yi3fSj7sWL1N_A' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 256[0m
+  [1m[36mApplicationChat Create (0.4ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (256, 1, '2019-07-20 08:18:21', '2019-07-20 08:18:21')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 6ms (Views: 0.2ms | ActiveRecord: 1.8ms)
+  [1m[35m (1.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications" for 127.0.0.1 at 2019-07-20 08:18:21 +0000
+Processing by ClientApplicationsController#create as HTML
+  Parameters: {"name"=>"test_application_name"}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', 'WMWr0_2WPbs7Cw', '2019-07-20 08:18:21', '2019-07-20 08:18:21')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 3ms (Views: 0.3ms | ActiveRecord: 0.9ms)
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'pB85Y1kJiCNkbg', '2019-07-20 08:18:21', '2019-07-20 08:18:21')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications/pB85Y1kJiCNkbg" for 127.0.0.1 at 2019-07-20 08:18:21 +0000
+Processing by ClientApplicationsController#show as HTML
+  Parameters: {"application_token"=>"pB85Y1kJiCNkbg"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'pB85Y1kJiCNkbg' LIMIT 1[0m
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'r-oQnFvSVrOOMg', '2019-07-20 08:18:21', '2019-07-20 08:18:21')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/applications/r-oQnFvSVrOOMg" for 127.0.0.1 at 2019-07-20 08:18:21 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"name"=>"new_test_client_application", "application_token"=>"r-oQnFvSVrOOMg"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'r-oQnFvSVrOOMg' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Update (0.4ms)[0m  [1m[33mUPDATE `client_applications` SET `name` = 'new_test_client_application' WHERE `client_applications`.`id` = 259[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 4ms (Views: 0.1ms | ActiveRecord: 1.4ms)
+  [1m[36mClientApplication Load (0.3ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`id` = 259 LIMIT 1[0m
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications" for 127.0.0.1 at 2019-07-20 08:18:21 +0000
+Processing by ClientApplicationsController#create as HTML
+Completed 400 Bad Request in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started GET "/applications/nonexistent_token" for 127.0.0.1 at 2019-07-20 08:18:21 +0000
+Processing by ClientApplicationsController#show as HTML
+  Parameters: {"application_token"=>"nonexistent_token"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'nonexistent_token' LIMIT 1[0m
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started PATCH "/applications/nonexistent_token" for 127.0.0.1 at 2019-07-20 08:18:21 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"name"=>"new_application_name", "application_token"=>"nonexistent_token"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'nonexistent_token' LIMIT 1[0m
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', '5TkkBRH-MFzxHg', '2019-07-20 08:18:21', '2019-07-20 08:18:21')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/applications/5TkkBRH-MFzxHg" for 127.0.0.1 at 2019-07-20 08:18:21 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"application_token"=>"5TkkBRH-MFzxHg"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '5TkkBRH-MFzxHg' LIMIT 1[0m
+Completed 400 Bad Request in 2ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'tmJWG47h4LuZEw', '2019-07-20 08:19:17', '2019-07-20 08:19:17')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 261[0m
+  [1m[36mApplicationChat Create (0.4ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (261, 1, '2019-07-20 08:19:17', '2019-07-20 08:19:17')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.6ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', 'RtePsi8BTdkTJw', '2019-07-20 08:19:17', '2019-07-20 08:19:17')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'GsdurcCqgbrTJQ', '2019-07-20 08:19:17', '2019-07-20 08:19:17')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 263[0m
+  [1m[36mApplicationChat Create (0.7ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (263, 1, '2019-07-20 08:19:17', '2019-07-20 08:19:17')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 263[0m
+  [1m[36mApplicationChat Create (0.4ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (263, 2, '2019-07-20 08:19:17', '2019-07-20 08:19:17')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications/GsdurcCqgbrTJQ/chats" for 127.0.0.1 at 2019-07-20 08:19:17 +0000
+Processing by ApplicationChatsController#index as HTML
+  Parameters: {"application_token"=>"GsdurcCqgbrTJQ"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'GsdurcCqgbrTJQ' LIMIT 1[0m
+  [1m[36mApplicationChat Load (0.5ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 263[0m
+Completed 200 OK in 6ms (Views: 1.6ms | ActiveRecord: 1.1ms)
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'C4jOc-l9oTeYyw', '2019-07-20 08:19:17', '2019-07-20 08:19:17')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/applications/C4jOc-l9oTeYyw/chats" for 127.0.0.1 at 2019-07-20 08:19:17 +0000
+Processing by ApplicationChatsController#create as HTML
+  Parameters: {"application_token"=>"C4jOc-l9oTeYyw"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'C4jOc-l9oTeYyw' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 264[0m
+  [1m[36mApplicationChat Create (0.4ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (264, 1, '2019-07-20 08:19:17', '2019-07-20 08:19:17')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 6ms (Views: 0.2ms | ActiveRecord: 1.8ms)
+  [1m[35m (1.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications" for 127.0.0.1 at 2019-07-20 08:19:17 +0000
+Processing by ClientApplicationsController#create as HTML
+  Parameters: {"name"=>"test_application_name"}
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', 'kwnjHuzEDU2VWg', '2019-07-20 08:19:17', '2019-07-20 08:19:17')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 4ms (Views: 0.4ms | ActiveRecord: 1.4ms)
+  [1m[35m (1.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', '10sKdhdoMdjDtA', '2019-07-20 08:19:17', '2019-07-20 08:19:17')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications/10sKdhdoMdjDtA" for 127.0.0.1 at 2019-07-20 08:19:17 +0000
+Processing by ClientApplicationsController#show as HTML
+  Parameters: {"application_token"=>"10sKdhdoMdjDtA"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '10sKdhdoMdjDtA' LIMIT 1[0m
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'aKGA89Gr2dHRCA', '2019-07-20 08:19:17', '2019-07-20 08:19:17')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/applications/aKGA89Gr2dHRCA" for 127.0.0.1 at 2019-07-20 08:19:17 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"name"=>"new_test_client_application", "application_token"=>"aKGA89Gr2dHRCA"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'aKGA89Gr2dHRCA' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Update (0.4ms)[0m  [1m[33mUPDATE `client_applications` SET `name` = 'new_test_client_application' WHERE `client_applications`.`id` = 267[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 4ms (Views: 0.1ms | ActiveRecord: 1.3ms)
+  [1m[36mClientApplication Load (0.3ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`id` = 267 LIMIT 1[0m
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications" for 127.0.0.1 at 2019-07-20 08:19:17 +0000
+Processing by ClientApplicationsController#create as HTML
+Completed 400 Bad Request in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started GET "/applications/nonexistent_token" for 127.0.0.1 at 2019-07-20 08:19:17 +0000
+Processing by ClientApplicationsController#show as HTML
+  Parameters: {"application_token"=>"nonexistent_token"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'nonexistent_token' LIMIT 1[0m
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started PATCH "/applications/nonexistent_token" for 127.0.0.1 at 2019-07-20 08:19:17 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"name"=>"new_application_name", "application_token"=>"nonexistent_token"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'nonexistent_token' LIMIT 1[0m
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.3ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'k0K-NghquXfF5A', '2019-07-20 08:19:17', '2019-07-20 08:19:17')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/applications/k0K-NghquXfF5A" for 127.0.0.1 at 2019-07-20 08:19:17 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"application_token"=>"k0K-NghquXfF5A"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'k0K-NghquXfF5A' LIMIT 1[0m
+Completed 400 Bad Request in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'NxdZy-_zbqCmRQ', '2019-07-20 08:20:11', '2019-07-20 08:20:11')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 269[0m
+  [1m[36mApplicationChat Create (0.4ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (269, 1, '2019-07-20 08:20:11', '2019-07-20 08:20:11')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.6ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', '16HbJo-BIF0mjA', '2019-07-20 08:20:11', '2019-07-20 08:20:11')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'gpPXZwDh46GOVg', '2019-07-20 08:20:11', '2019-07-20 08:20:11')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 271[0m
+  [1m[36mApplicationChat Create (0.8ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (271, 1, '2019-07-20 08:20:11', '2019-07-20 08:20:11')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 271[0m
+  [1m[36mApplicationChat Create (0.4ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (271, 2, '2019-07-20 08:20:11', '2019-07-20 08:20:11')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications/gpPXZwDh46GOVg/chats" for 127.0.0.1 at 2019-07-20 08:20:11 +0000
+Processing by ApplicationChatsController#index as HTML
+  Parameters: {"application_token"=>"gpPXZwDh46GOVg"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'gpPXZwDh46GOVg' LIMIT 1[0m
+  [1m[36mApplicationChat Load (0.5ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 271[0m
+Completed 200 OK in 7ms (Views: 1.5ms | ActiveRecord: 1.0ms)
+  [1m[35m (1.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'Is0IZS87aATIMA', '2019-07-20 08:20:11', '2019-07-20 08:20:11')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/applications/Is0IZS87aATIMA/chats" for 127.0.0.1 at 2019-07-20 08:20:11 +0000
+Processing by ApplicationChatsController#create as HTML
+  Parameters: {"application_token"=>"Is0IZS87aATIMA"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'Is0IZS87aATIMA' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 272[0m
+  [1m[36mApplicationChat Create (0.4ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (272, 1, '2019-07-20 08:20:11', '2019-07-20 08:20:11')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 7ms (Views: 0.2ms | ActiveRecord: 1.9ms)
+  [1m[35m (1.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications" for 127.0.0.1 at 2019-07-20 08:20:11 +0000
+Processing by ClientApplicationsController#create as HTML
+  Parameters: {"name"=>"test_application_name"}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', 'KPggZhG0d4z7vw', '2019-07-20 08:20:11', '2019-07-20 08:20:11')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 4ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+  [1m[35m (1.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'lST0c-Drnd6loQ', '2019-07-20 08:20:11', '2019-07-20 08:20:11')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications/lST0c-Drnd6loQ" for 127.0.0.1 at 2019-07-20 08:20:11 +0000
+Processing by ClientApplicationsController#show as HTML
+  Parameters: {"application_token"=>"lST0c-Drnd6loQ"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'lST0c-Drnd6loQ' LIMIT 1[0m
+  [1m[36mCACHE ClientApplication Load (0.0ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'lST0c-Drnd6loQ' LIMIT 1[0m  [["identifier_token", "lST0c-Drnd6loQ"], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (2.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.3ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'p5pOBsh88WpFMw', '2019-07-20 08:20:11', '2019-07-20 08:20:11')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/applications/p5pOBsh88WpFMw" for 127.0.0.1 at 2019-07-20 08:20:11 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"name"=>"new_test_client_application", "application_token"=>"p5pOBsh88WpFMw"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'p5pOBsh88WpFMw' LIMIT 1[0m
+  [1m[36mCACHE ClientApplication Load (0.0ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'p5pOBsh88WpFMw' LIMIT 1[0m  [["identifier_token", "p5pOBsh88WpFMw"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Update (0.5ms)[0m  [1m[33mUPDATE `client_applications` SET `name` = 'new_test_client_application' WHERE `client_applications`.`id` = 275[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 6ms (Views: 0.1ms | ActiveRecord: 1.6ms)
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`id` = 275 LIMIT 1[0m
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications" for 127.0.0.1 at 2019-07-20 08:20:11 +0000
+Processing by ClientApplicationsController#create as HTML
+Completed 400 Bad Request in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/applications/nonexistent_token" for 127.0.0.1 at 2019-07-20 08:20:11 +0000
+Processing by ClientApplicationsController#show as HTML
+  Parameters: {"application_token"=>"nonexistent_token"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'nonexistent_token' LIMIT 1[0m
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started PATCH "/applications/nonexistent_token" for 127.0.0.1 at 2019-07-20 08:20:11 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"name"=>"new_application_name", "application_token"=>"nonexistent_token"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'nonexistent_token' LIMIT 1[0m
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 's5zXxzBPtpKMLA', '2019-07-20 08:20:11', '2019-07-20 08:20:11')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/applications/s5zXxzBPtpKMLA" for 127.0.0.1 at 2019-07-20 08:20:11 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"application_token"=>"s5zXxzBPtpKMLA"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 's5zXxzBPtpKMLA' LIMIT 1[0m
+  [1m[36mCACHE ClientApplication Load (0.0ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 's5zXxzBPtpKMLA' LIMIT 1[0m  [["identifier_token", "s5zXxzBPtpKMLA"], ["LIMIT", 1]]
+Completed 400 Bad Request in 2ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'Vqlw1OIF5gOHSA', '2019-07-20 08:22:28', '2019-07-20 08:22:28')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 277[0m
+  [1m[36mApplicationChat Create (0.3ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (277, 1, '2019-07-20 08:22:28', '2019-07-20 08:22:28')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.6ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', 'ShGvixjWIfzJSw', '2019-07-20 08:22:28', '2019-07-20 08:22:28')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', '7EpqtRs2--rGvw', '2019-07-20 08:22:28', '2019-07-20 08:22:28')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 279[0m
+  [1m[36mApplicationChat Create (0.6ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (279, 1, '2019-07-20 08:22:28', '2019-07-20 08:22:28')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 279[0m
+  [1m[36mApplicationChat Create (0.4ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (279, 2, '2019-07-20 08:22:28', '2019-07-20 08:22:28')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications/7EpqtRs2--rGvw/chats" for 127.0.0.1 at 2019-07-20 08:22:28 +0000
+Processing by ApplicationChatsController#index as HTML
+  Parameters: {"application_token"=>"7EpqtRs2--rGvw"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '7EpqtRs2--rGvw' LIMIT 1[0m
+  [1m[36mApplicationChat Load (0.5ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 279[0m
+Completed 200 OK in 7ms (Views: 1.5ms | ActiveRecord: 1.1ms)
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'vIMp-RmT0rAvxw', '2019-07-20 08:22:28', '2019-07-20 08:22:28')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/applications/vIMp-RmT0rAvxw/chats" for 127.0.0.1 at 2019-07-20 08:22:28 +0000
+Processing by ApplicationChatsController#create as HTML
+  Parameters: {"application_token"=>"vIMp-RmT0rAvxw"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'vIMp-RmT0rAvxw' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 280[0m
+  [1m[36mApplicationChat Create (0.4ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (280, 1, '2019-07-20 08:22:28', '2019-07-20 08:22:28')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 6ms (Views: 0.2ms | ActiveRecord: 1.8ms)
+  [1m[35m (1.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications" for 127.0.0.1 at 2019-07-20 08:22:28 +0000
+Processing by ClientApplicationsController#create as HTML
+  Parameters: {"name"=>"test_application_name"}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', 'UKkLdcA2K1kWUA', '2019-07-20 08:22:28', '2019-07-20 08:22:28')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 4ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'CPveX5jfwzYsHw', '2019-07-20 08:22:28', '2019-07-20 08:22:28')[0m
+  [1m[35m (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications/CPveX5jfwzYsHw" for 127.0.0.1 at 2019-07-20 08:22:28 +0000
+Processing by ClientApplicationsController#show as HTML
+  Parameters: {"application_token"=>"CPveX5jfwzYsHw"}
+Completed 404 Not Found in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (1.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'msduSoScQFr8Fg', '2019-07-20 08:22:28', '2019-07-20 08:22:28')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/applications/msduSoScQFr8Fg" for 127.0.0.1 at 2019-07-20 08:22:28 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"name"=>"new_test_client_application", "application_token"=>"msduSoScQFr8Fg"}
+Completed 404 Not Found in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (1.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications" for 127.0.0.1 at 2019-07-20 08:22:28 +0000
+Processing by ClientApplicationsController#create as HTML
+Completed 400 Bad Request in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/applications/nonexistent_token" for 127.0.0.1 at 2019-07-20 08:22:28 +0000
+Processing by ClientApplicationsController#show as HTML
+  Parameters: {"application_token"=>"nonexistent_token"}
+Completed 404 Not Found in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started PATCH "/applications/nonexistent_token" for 127.0.0.1 at 2019-07-20 08:22:28 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"name"=>"new_application_name", "application_token"=>"nonexistent_token"}
+Completed 404 Not Found in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'cVUAFDPSsRbxCg', '2019-07-20 08:22:28', '2019-07-20 08:22:28')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/applications/cVUAFDPSsRbxCg" for 127.0.0.1 at 2019-07-20 08:22:28 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"application_token"=>"cVUAFDPSsRbxCg"}
+Completed 404 Not Found in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (1.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'QG_VaHOPPJp95g', '2019-07-20 08:22:54', '2019-07-20 08:22:54')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 285[0m
+  [1m[36mApplicationChat Create (0.4ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (285, 1, '2019-07-20 08:22:54', '2019-07-20 08:22:54')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', 'aTpVkI4mUCkIwg', '2019-07-20 08:22:54', '2019-07-20 08:22:54')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 't6AbmBvITo566g', '2019-07-20 08:22:55', '2019-07-20 08:22:55')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 287[0m
+  [1m[36mApplicationChat Create (0.4ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (287, 1, '2019-07-20 08:22:55', '2019-07-20 08:22:55')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 287[0m
+  [1m[36mApplicationChat Create (0.4ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (287, 2, '2019-07-20 08:22:55', '2019-07-20 08:22:55')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications/t6AbmBvITo566g/chats" for 127.0.0.1 at 2019-07-20 08:22:55 +0000
+Processing by ApplicationChatsController#index as HTML
+  Parameters: {"application_token"=>"t6AbmBvITo566g"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 't6AbmBvITo566g' LIMIT 1[0m
+  [1m[36mApplicationChat Load (0.5ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 287[0m
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 1.0ms)
+  [1m[35m (2.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'dGG5mGEYZNDeqQ', '2019-07-20 08:22:55', '2019-07-20 08:22:55')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/applications/dGG5mGEYZNDeqQ/chats" for 127.0.0.1 at 2019-07-20 08:22:55 +0000
+Processing by ApplicationChatsController#create as HTML
+  Parameters: {"application_token"=>"dGG5mGEYZNDeqQ"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'dGG5mGEYZNDeqQ' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 288[0m
+  [1m[36mApplicationChat Create (0.5ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (288, 1, '2019-07-20 08:22:55', '2019-07-20 08:22:55')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 8ms (Views: 0.5ms | ActiveRecord: 2.0ms)
+  [1m[35m (2.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications" for 127.0.0.1 at 2019-07-20 08:22:55 +0000
+Processing by ClientApplicationsController#create as HTML
+  Parameters: {"name"=>"test_application_name"}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', 'uXPo5PLkr1s4Jg', '2019-07-20 08:22:55', '2019-07-20 08:22:55')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 4ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'CNXoa4GVeOqmUw', '2019-07-20 08:22:55', '2019-07-20 08:22:55')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications/CNXoa4GVeOqmUw" for 127.0.0.1 at 2019-07-20 08:22:55 +0000
+Processing by ClientApplicationsController#show as HTML
+  Parameters: {"application_token"=>"CNXoa4GVeOqmUw"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'CNXoa4GVeOqmUw' LIMIT 1[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'ra0Ze7tN4wz-Mg', '2019-07-20 08:22:55', '2019-07-20 08:22:55')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/applications/ra0Ze7tN4wz-Mg" for 127.0.0.1 at 2019-07-20 08:22:55 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"name"=>"new_test_client_application", "application_token"=>"ra0Ze7tN4wz-Mg"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'ra0Ze7tN4wz-Mg' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Update (0.4ms)[0m  [1m[33mUPDATE `client_applications` SET `name` = 'new_test_client_application' WHERE `client_applications`.`id` = 291[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 4ms (Views: 0.1ms | ActiveRecord: 1.4ms)
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`id` = 291 LIMIT 1[0m
+  [1m[35m (1.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications" for 127.0.0.1 at 2019-07-20 08:22:55 +0000
+Processing by ClientApplicationsController#create as HTML
+Completed 400 Bad Request in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started GET "/applications/nonexistent_token" for 127.0.0.1 at 2019-07-20 08:22:55 +0000
+Processing by ClientApplicationsController#show as HTML
+  Parameters: {"application_token"=>"nonexistent_token"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'nonexistent_token' LIMIT 1[0m
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started PATCH "/applications/nonexistent_token" for 127.0.0.1 at 2019-07-20 08:22:55 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"name"=>"new_application_name", "application_token"=>"nonexistent_token"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'nonexistent_token' LIMIT 1[0m
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', '933qy6viQvP05w', '2019-07-20 08:22:55', '2019-07-20 08:22:55')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/applications/933qy6viQvP05w" for 127.0.0.1 at 2019-07-20 08:22:55 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"application_token"=>"933qy6viQvP05w"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '933qy6viQvP05w' LIMIT 1[0m
+Completed 400 Bad Request in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (1.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'K1EqYMdut55jag', '2019-07-20 08:25:26', '2019-07-20 08:25:26')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 293[0m
+  [1m[36mApplicationChat Create (0.4ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (293, 1, '2019-07-20 08:25:26', '2019-07-20 08:25:26')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', 'kj1_Oei-1GWyFw', '2019-07-20 08:25:26', '2019-07-20 08:25:26')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'LWWuf0z3n-0toA', '2019-07-20 08:25:26', '2019-07-20 08:25:26')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 295[0m
+  [1m[36mApplicationChat Create (0.3ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (295, 1, '2019-07-20 08:25:26', '2019-07-20 08:25:26')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 295[0m
+  [1m[36mApplicationChat Create (0.3ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (295, 2, '2019-07-20 08:25:26', '2019-07-20 08:25:26')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications/LWWuf0z3n-0toA/chats" for 127.0.0.1 at 2019-07-20 08:25:26 +0000
+Processing by ApplicationChatsController#index as HTML
+  Parameters: {"application_token"=>"LWWuf0z3n-0toA"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'LWWuf0z3n-0toA' LIMIT 1[0m
+  [1m[36mApplicationChat Load (0.6ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 295[0m
+Completed 200 OK in 8ms (Views: 2.3ms | ActiveRecord: 1.1ms)
+  [1m[35m (1.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', '9QcTcnXvZFxz_g', '2019-07-20 08:25:26', '2019-07-20 08:25:26')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/applications/9QcTcnXvZFxz_g/chats" for 127.0.0.1 at 2019-07-20 08:25:26 +0000
+Processing by ApplicationChatsController#create as HTML
+  Parameters: {"application_token"=>"9QcTcnXvZFxz_g"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '9QcTcnXvZFxz_g' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 296[0m
+  [1m[36mApplicationChat Create (0.3ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (296, 1, '2019-07-20 08:25:26', '2019-07-20 08:25:26')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 6ms (Views: 0.2ms | ActiveRecord: 1.5ms)
+  [1m[35m (1.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.3ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'pYy8N9lcLqeYgg', '2019-07-20 08:25:26', '2019-07-20 08:25:26')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications/pYy8N9lcLqeYgg/chats" for 127.0.0.1 at 2019-07-20 08:25:26 +0000
+Processing by ApplicationChatsController#index as HTML
+  Parameters: {"application_token"=>"pYy8N9lcLqeYgg"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'pYy8N9lcLqeYgg' LIMIT 1[0m
+  [1m[36mApplicationChat Load (0.3ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 297[0m
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.8ms)
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications" for 127.0.0.1 at 2019-07-20 08:25:26 +0000
+Processing by ClientApplicationsController#create as HTML
+  Parameters: {"name"=>"test_application_name"}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', 'ySz5hY6OCzoH5w', '2019-07-20 08:25:26', '2019-07-20 08:25:26')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 3ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.3ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'tDV_JtdFbtMCUg', '2019-07-20 08:25:26', '2019-07-20 08:25:26')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications/tDV_JtdFbtMCUg" for 127.0.0.1 at 2019-07-20 08:25:26 +0000
+Processing by ClientApplicationsController#show as HTML
+  Parameters: {"application_token"=>"tDV_JtdFbtMCUg"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'tDV_JtdFbtMCUg' LIMIT 1[0m
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.3ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'S8s-mnDZP8M8Cw', '2019-07-20 08:25:26', '2019-07-20 08:25:26')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/applications/S8s-mnDZP8M8Cw" for 127.0.0.1 at 2019-07-20 08:25:26 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"name"=>"new_test_client_application", "application_token"=>"S8s-mnDZP8M8Cw"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'S8s-mnDZP8M8Cw' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Update (0.4ms)[0m  [1m[33mUPDATE `client_applications` SET `name` = 'new_test_client_application' WHERE `client_applications`.`id` = 300[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 4ms (Views: 0.1ms | ActiveRecord: 1.3ms)
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`id` = 300 LIMIT 1[0m
+  [1m[35m (2.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications" for 127.0.0.1 at 2019-07-20 08:25:26 +0000
+Processing by ClientApplicationsController#create as HTML
+Completed 400 Bad Request in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started GET "/applications/nonexistent_token" for 127.0.0.1 at 2019-07-20 08:25:26 +0000
+Processing by ClientApplicationsController#show as HTML
+  Parameters: {"application_token"=>"nonexistent_token"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'nonexistent_token' LIMIT 1[0m
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started PATCH "/applications/nonexistent_token" for 127.0.0.1 at 2019-07-20 08:25:26 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"name"=>"new_application_name", "application_token"=>"nonexistent_token"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'nonexistent_token' LIMIT 1[0m
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', '79NtIMDEaCsOUA', '2019-07-20 08:25:26', '2019-07-20 08:25:26')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/applications/79NtIMDEaCsOUA" for 127.0.0.1 at 2019-07-20 08:25:26 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"application_token"=>"79NtIMDEaCsOUA"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '79NtIMDEaCsOUA' LIMIT 1[0m
+Completed 400 Bad Request in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (1.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'dqX53EwBnQrU2w', '2019-07-20 08:29:26', '2019-07-20 08:29:26')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 302[0m
+  [1m[36mApplicationChat Create (0.3ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (302, 1, '2019-07-20 08:29:26', '2019-07-20 08:29:26')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', 'fgZ5rIdnCGfqvw', '2019-07-20 08:29:26', '2019-07-20 08:29:26')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 's0Cbxr9jUpjM4g', '2019-07-20 08:29:26', '2019-07-20 08:29:26')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 304[0m
+  [1m[36mApplicationChat Create (0.3ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (304, 1, '2019-07-20 08:29:26', '2019-07-20 08:29:26')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 304[0m
+  [1m[36mApplicationChat Create (0.3ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (304, 2, '2019-07-20 08:29:26', '2019-07-20 08:29:26')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications/s0Cbxr9jUpjM4g/chats" for 127.0.0.1 at 2019-07-20 08:29:26 +0000
+Processing by ApplicationChatsController#index as HTML
+  Parameters: {"application_token"=>"s0Cbxr9jUpjM4g"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 's0Cbxr9jUpjM4g' LIMIT 1[0m
+  [1m[36mApplicationChat Load (0.4ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 304[0m
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 0.9ms)
+  [1m[35m (1.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.3ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'qZgLcl2ZWhrNWA', '2019-07-20 08:29:26', '2019-07-20 08:29:26')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/applications/qZgLcl2ZWhrNWA/chats" for 127.0.0.1 at 2019-07-20 08:29:26 +0000
+Processing by ApplicationChatsController#create as HTML
+  Parameters: {"application_token"=>"qZgLcl2ZWhrNWA"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'qZgLcl2ZWhrNWA' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 305[0m
+  [1m[36mApplicationChat Create (0.4ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (305, 1, '2019-07-20 08:29:26', '2019-07-20 08:29:26')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 7ms (Views: 0.3ms | ActiveRecord: 1.7ms)
+  [1m[35m (2.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.3ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'Yeve0CvO2uFMig', '2019-07-20 08:29:26', '2019-07-20 08:29:26')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications/Yeve0CvO2uFMig/chats" for 127.0.0.1 at 2019-07-20 08:29:26 +0000
+Processing by ApplicationChatsController#index as HTML
+  Parameters: {"application_token"=>"Yeve0CvO2uFMig"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'Yeve0CvO2uFMig' LIMIT 1[0m
+  [1m[36mApplicationChat Load (0.3ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 306[0m
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.7ms)
+  [1m[35m (2.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications/nonexistent_token/chats" for 127.0.0.1 at 2019-07-20 08:29:26 +0000
+Processing by ApplicationChatsController#create as HTML
+  Parameters: {"application_token"=>"nonexistent_token"}
+  [1m[36mClientApplication Load (0.3ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'nonexistent_token' LIMIT 1[0m
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications" for 127.0.0.1 at 2019-07-20 08:29:26 +0000
+Processing by ClientApplicationsController#create as HTML
+  Parameters: {"name"=>"test_application_name"}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', 'di0lWo4_u53MFw', '2019-07-20 08:29:26', '2019-07-20 08:29:26')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 4ms (Views: 0.3ms | ActiveRecord: 0.9ms)
+  [1m[35m (1.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.3ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', '57oXJqubPqIb6A', '2019-07-20 08:29:26', '2019-07-20 08:29:26')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications/57oXJqubPqIb6A" for 127.0.0.1 at 2019-07-20 08:29:26 +0000
+Processing by ClientApplicationsController#show as HTML
+  Parameters: {"application_token"=>"57oXJqubPqIb6A"}
+  [1m[36mClientApplication Load (0.3ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '57oXJqubPqIb6A' LIMIT 1[0m
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.3ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'F7BWtqHbfPBegg', '2019-07-20 08:29:26', '2019-07-20 08:29:26')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/applications/F7BWtqHbfPBegg" for 127.0.0.1 at 2019-07-20 08:29:26 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"name"=>"new_test_client_application", "application_token"=>"F7BWtqHbfPBegg"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'F7BWtqHbfPBegg' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Update (0.4ms)[0m  [1m[33mUPDATE `client_applications` SET `name` = 'new_test_client_application' WHERE `client_applications`.`id` = 309[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 4ms (Views: 0.1ms | ActiveRecord: 1.3ms)
+  [1m[36mClientApplication Load (0.3ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`id` = 309 LIMIT 1[0m
+  [1m[35m (1.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications" for 127.0.0.1 at 2019-07-20 08:29:26 +0000
+Processing by ClientApplicationsController#create as HTML
+Completed 400 Bad Request in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started GET "/applications/nonexistent_token" for 127.0.0.1 at 2019-07-20 08:29:26 +0000
+Processing by ClientApplicationsController#show as HTML
+  Parameters: {"application_token"=>"nonexistent_token"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'nonexistent_token' LIMIT 1[0m
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started PATCH "/applications/nonexistent_token" for 127.0.0.1 at 2019-07-20 08:29:26 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"name"=>"new_application_name", "application_token"=>"nonexistent_token"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'nonexistent_token' LIMIT 1[0m
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.3ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'bHQio7c-JGJhvg', '2019-07-20 08:29:26', '2019-07-20 08:29:26')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/applications/bHQio7c-JGJhvg" for 127.0.0.1 at 2019-07-20 08:29:26 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"application_token"=>"bHQio7c-JGJhvg"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'bHQio7c-JGJhvg' LIMIT 1[0m
+Completed 400 Bad Request in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'eQl0MPFbXvbt6Q', '2019-07-20 08:33:49', '2019-07-20 08:33:49')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 311[0m
+  [1m[36mApplicationChat Create (0.4ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (311, 1, '2019-07-20 08:33:49', '2019-07-20 08:33:49')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', 'XQtGQyHld-rVVQ', '2019-07-20 08:33:49', '2019-07-20 08:33:49')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'JP-XcgBSTcFyaA', '2019-07-20 08:33:49', '2019-07-20 08:33:49')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 313[0m
+  [1m[36mApplicationChat Create (0.6ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (313, 1, '2019-07-20 08:33:49', '2019-07-20 08:33:49')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 313[0m
+  [1m[36mApplicationChat Create (0.4ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (313, 2, '2019-07-20 08:33:49', '2019-07-20 08:33:49')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications/JP-XcgBSTcFyaA/chats" for 127.0.0.1 at 2019-07-20 08:33:49 +0000
+Processing by ApplicationChatsController#index as HTML
+  Parameters: {"application_token"=>"JP-XcgBSTcFyaA"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'JP-XcgBSTcFyaA' LIMIT 1[0m
+  [1m[36mApplicationChat Load (0.5ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 313[0m
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 1.0ms)
+  [1m[35m (1.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'pOyxt_6tGNBn6w', '2019-07-20 08:33:49', '2019-07-20 08:33:49')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/applications/pOyxt_6tGNBn6w/chats" for 127.0.0.1 at 2019-07-20 08:33:49 +0000
+Processing by ApplicationChatsController#create as HTML
+  Parameters: {"application_token"=>"pOyxt_6tGNBn6w"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'pOyxt_6tGNBn6w' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 314[0m
+  [1m[36mApplicationChat Create (0.6ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (314, 1, '2019-07-20 08:33:49', '2019-07-20 08:33:49')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 7ms (Views: 0.2ms | ActiveRecord: 2.1ms)
+  [1m[35m (2.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', '8RRmZPav1cVErg', '2019-07-20 08:33:49', '2019-07-20 08:33:49')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications/8RRmZPav1cVErg/chats" for 127.0.0.1 at 2019-07-20 08:33:49 +0000
+Processing by ApplicationChatsController#index as HTML
+  Parameters: {"application_token"=>"8RRmZPav1cVErg"}
+  [1m[36mClientApplication Load (0.7ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '8RRmZPav1cVErg' LIMIT 1[0m
+  [1m[36mApplicationChat Load (0.5ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 315[0m
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 1.2ms)
+  [1m[35m (1.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications/nonexistent_token/chats" for 127.0.0.1 at 2019-07-20 08:33:50 +0000
+Processing by ApplicationChatsController#create as HTML
+  Parameters: {"application_token"=>"nonexistent_token"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'nonexistent_token' LIMIT 1[0m
+Completed 400 Bad Request in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications" for 127.0.0.1 at 2019-07-20 08:33:50 +0000
+Processing by ClientApplicationsController#create as HTML
+  Parameters: {"name"=>"test_application_name"}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', 'EczIV7yY1leyEg', '2019-07-20 08:33:50', '2019-07-20 08:33:50')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 4ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', '25Az_8MIlUd35Q', '2019-07-20 08:33:50', '2019-07-20 08:33:50')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications/25Az_8MIlUd35Q" for 127.0.0.1 at 2019-07-20 08:33:50 +0000
+Processing by ClientApplicationsController#show as HTML
+  Parameters: {"application_token"=>"25Az_8MIlUd35Q"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '25Az_8MIlUd35Q' LIMIT 1[0m
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.3ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'JuV_P2P7ZFKb7Q', '2019-07-20 08:33:50', '2019-07-20 08:33:50')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/applications/JuV_P2P7ZFKb7Q" for 127.0.0.1 at 2019-07-20 08:33:50 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"name"=>"new_test_client_application", "application_token"=>"JuV_P2P7ZFKb7Q"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'JuV_P2P7ZFKb7Q' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Update (0.4ms)[0m  [1m[33mUPDATE `client_applications` SET `name` = 'new_test_client_application' WHERE `client_applications`.`id` = 318[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 5ms (Views: 0.1ms | ActiveRecord: 1.5ms)
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`id` = 318 LIMIT 1[0m
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications" for 127.0.0.1 at 2019-07-20 08:33:50 +0000
+Processing by ClientApplicationsController#create as HTML
+Completed 400 Bad Request in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/applications/nonexistent_token" for 127.0.0.1 at 2019-07-20 08:33:50 +0000
+Processing by ClientApplicationsController#show as HTML
+  Parameters: {"application_token"=>"nonexistent_token"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'nonexistent_token' LIMIT 1[0m
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started PATCH "/applications/nonexistent_token" for 127.0.0.1 at 2019-07-20 08:33:50 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"name"=>"new_application_name", "application_token"=>"nonexistent_token"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'nonexistent_token' LIMIT 1[0m
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.3ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'vTKLFkRCrRn2Eg', '2019-07-20 08:33:50', '2019-07-20 08:33:50')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/applications/vTKLFkRCrRn2Eg" for 127.0.0.1 at 2019-07-20 08:33:50 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"application_token"=>"vTKLFkRCrRn2Eg"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'vTKLFkRCrRn2Eg' LIMIT 1[0m
+Completed 400 Bad Request in 1ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.3ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'fouHLRf164qpWg', '2019-07-20 08:41:50', '2019-07-20 08:41:50')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 320[0m
+  [1m[36mApplicationChat Create (0.3ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (320, 1, '2019-07-20 08:41:50', '2019-07-20 08:41:50')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', 'kiTX1vkQ8QQSBQ', '2019-07-20 08:41:50', '2019-07-20 08:41:50')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'TjJD6smmN2H6cw', '2019-07-20 08:41:50', '2019-07-20 08:41:50')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 322[0m
+  [1m[36mApplicationChat Create (0.3ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (322, 1, '2019-07-20 08:41:50', '2019-07-20 08:41:50')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 322[0m
+  [1m[36mApplicationChat Create (0.3ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (322, 2, '2019-07-20 08:41:50', '2019-07-20 08:41:50')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications/TjJD6smmN2H6cw/chats" for 127.0.0.1 at 2019-07-20 08:41:50 +0000
+Processing by ApplicationChatsController#index as HTML
+  Parameters: {"application_token"=>"TjJD6smmN2H6cw"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'TjJD6smmN2H6cw' LIMIT 1[0m
+  [1m[36mApplicationChat Load (0.4ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 322[0m
+Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 0.9ms)
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.3ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'nK6YYxu-P-7OmA', '2019-07-20 08:41:50', '2019-07-20 08:41:50')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/applications/nK6YYxu-P-7OmA/chats" for 127.0.0.1 at 2019-07-20 08:41:50 +0000
+Processing by ApplicationChatsController#create as HTML
+  Parameters: {"application_token"=>"nK6YYxu-P-7OmA"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'nK6YYxu-P-7OmA' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `application_chats` WHERE `application_chats`.`client_application_id` = 323[0m
+  [1m[36mApplicationChat Create (0.3ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`) VALUES (323, 1, '2019-07-20 08:41:50', '2019-07-20 08:41:50')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 6ms (Views: 0.2ms | ActiveRecord: 1.6ms)
+  [1m[35m (1.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'zlk4-6PxSzEsUw', '2019-07-20 08:41:50', '2019-07-20 08:41:50')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications/zlk4-6PxSzEsUw/chats" for 127.0.0.1 at 2019-07-20 08:41:50 +0000
+Processing by ApplicationChatsController#index as HTML
+  Parameters: {"application_token"=>"zlk4-6PxSzEsUw"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'zlk4-6PxSzEsUw' LIMIT 1[0m
+  [1m[36mApplicationChat Load (0.3ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 324[0m
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.7ms)
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications/nonexistent_token/chats" for 127.0.0.1 at 2019-07-20 08:41:50 +0000
+Processing by ApplicationChatsController#create as HTML
+  Parameters: {"application_token"=>"nonexistent_token"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'nonexistent_token' LIMIT 1[0m
+Completed 400 Bad Request in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications" for 127.0.0.1 at 2019-07-20 08:41:50 +0000
+Processing by ClientApplicationsController#create as HTML
+  Parameters: {"name"=>"test_application_name"}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.3ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_application_name', 'T5eyDYvHGMKNEw', '2019-07-20 08:41:50', '2019-07-20 08:41:50')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 4ms (Views: 0.3ms | ActiveRecord: 0.8ms)
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.3ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'N7q4L94O6Z-2KA', '2019-07-20 08:41:50', '2019-07-20 08:41:50')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/applications/N7q4L94O6Z-2KA" for 127.0.0.1 at 2019-07-20 08:41:50 +0000
+Processing by ClientApplicationsController#show as HTML
+  Parameters: {"application_token"=>"N7q4L94O6Z-2KA"}
+  [1m[36mClientApplication Load (0.3ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'N7q4L94O6Z-2KA' LIMIT 1[0m
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.3ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'Jl0ljS0k-yxsbw', '2019-07-20 08:41:50', '2019-07-20 08:41:50')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/applications/Jl0ljS0k-yxsbw" for 127.0.0.1 at 2019-07-20 08:41:50 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"name"=>"new_test_client_application", "application_token"=>"Jl0ljS0k-yxsbw"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'Jl0ljS0k-yxsbw' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Update (0.4ms)[0m  [1m[33mUPDATE `client_applications` SET `name` = 'new_test_client_application' WHERE `client_applications`.`id` = 327[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 4ms (Views: 0.1ms | ActiveRecord: 1.2ms)
+  [1m[36mClientApplication Load (0.3ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`id` = 327 LIMIT 1[0m
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/applications" for 127.0.0.1 at 2019-07-20 08:41:50 +0000
+Processing by ClientApplicationsController#create as HTML
+Completed 400 Bad Request in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/applications/nonexistent_token" for 127.0.0.1 at 2019-07-20 08:41:50 +0000
+Processing by ClientApplicationsController#show as HTML
+  Parameters: {"application_token"=>"nonexistent_token"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'nonexistent_token' LIMIT 1[0m
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started PATCH "/applications/nonexistent_token" for 127.0.0.1 at 2019-07-20 08:41:50 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"name"=>"new_application_name", "application_token"=>"nonexistent_token"}
+  [1m[36mClientApplication Load (0.3ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'nonexistent_token' LIMIT 1[0m
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test_client_application', 'ZPkCbZFihjMuZA', '2019-07-20 08:41:50', '2019-07-20 08:41:50')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/applications/ZPkCbZFihjMuZA" for 127.0.0.1 at 2019-07-20 08:41:50 +0000
+Processing by ClientApplicationsController#update as HTML
+  Parameters: {"application_token"=>"ZPkCbZFihjMuZA"}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'ZPkCbZFihjMuZA' LIMIT 1[0m
+Completed 400 Bad Request in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m

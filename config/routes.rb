@@ -5,7 +5,11 @@ Rails.application.routes.draw do
       get '/', to: 'client_applications#show'
       patch '/', to: 'client_applications#update'
 
-      get '/chats', to: 'application_chats#index'
+      scope '/chats' do
+        get '/', to: 'application_chats#index'
+        post '/', to: 'application_chats#create'
+      end
+
     end
     get '/', to: 'client_applications#index'
     post '/', to: 'client_applications#create'
