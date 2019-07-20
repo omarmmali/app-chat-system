@@ -8,13 +8,13 @@ class ClientApplicationsController < ApplicationController
   end
 
   def show
-    client_application = ClientApplication.find_by_identifier_token(params[:application_token])
+    client_application = ClientApplication.find_by_identifier_token(params[:token])
     handle_entity_not_found and return unless client_application
     render status: :ok, json: {:application => client_application}
   end
 
   def update
-    client_application = ClientApplication.find_by_identifier_token(params[:application_token])
+    client_application = ClientApplication.find_by_identifier_token(params[:token])
     handle_entity_not_found and return unless client_application
 
     client_application.update(:name => client_application_params)

@@ -1,26 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  scope '/applications' do
-
-    scope ':application_token' do
-      get '/', to: 'client_applications#show'
-      patch '/', to: 'client_applications#update'
-
-      scope '/chats' do
-        get '/', to: 'application_chats#index'
-        post '/', to: 'application_chats#create'
-
-        scope ':chat_number' do
-          get '/', to: 'application_chats#show'
-          patch '/', to: 'application_chats#update'
-
-          get '/messages', to: 'chat_messages#index'
-          get '/messages/:message_number', to: 'chat_messages#show'
-        end
+    resources :client_applications, except: [:index, :new, :edit, :destroy], path: '/applications', param: :token do
+      resources :application_chats, except: [:new, :edit, :destroy], path: '/chats', param: :number do
+        resources :chat_messages, except: [:new, :edit, :destroy], path: '/messages', param: :number
       end
-
     end
-    get '/', to: 'client_applications#index'
-    post '/', to: 'client_applications#create'
-  end
 end

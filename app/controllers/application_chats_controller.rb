@@ -1,6 +1,6 @@
 class ApplicationChatsController < ApplicationController
   def index
-    parent_application = ClientApplication.find_by_identifier_token(params[:application_token])
+    parent_application = ClientApplication.find_by_identifier_token(params[:client_application_token])
     handle_error_for("application token") and return unless parent_application
 
     application_chats = parent_application.chats
@@ -8,7 +8,7 @@ class ApplicationChatsController < ApplicationController
   end
 
   def create
-    parent_application = ClientApplication.find_by_identifier_token(params[:application_token])
+    parent_application = ClientApplication.find_by_identifier_token(params[:client_application_token])
     handle_error_for("application token") and return unless parent_application
 
     created_chat = parent_application.chats.create
@@ -16,10 +16,10 @@ class ApplicationChatsController < ApplicationController
   end
 
   def update
-    parent_application = ClientApplication.find_by_identifier_token(params[:application_token])
+    parent_application = ClientApplication.find_by_identifier_token(params[:client_application_token])
     handle_error_for("application token") and return unless parent_application
 
-    application_chat = parent_application.chats.find_by(:identifier_number => params[:chat_number])
+    application_chat = parent_application.chats.find_by(:identifier_number => params[:number])
     handle_error_for("chat number") and return unless application_chat
 
     application_chat.update(chat_params)
@@ -27,10 +27,10 @@ class ApplicationChatsController < ApplicationController
   end
 
   def show
-    parent_application = ClientApplication.find_by_identifier_token(params[:application_token])
+    parent_application = ClientApplication.find_by_identifier_token(params[:client_application_token])
     handle_error_for("application token") and return unless parent_application
 
-    application_chat = parent_application.chats.find_by(:identifier_number => params[:chat_number])
+    application_chat = parent_application.chats.find_by(:identifier_number => params[:number])
     handle_error_for("chat number") and return unless application_chat
 
     render status: :ok, json: {:chat => application_chat}

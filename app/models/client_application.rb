@@ -10,6 +10,7 @@ class ClientApplication < ApplicationRecord
     self.identifier_token = SecureRandom.urlsafe_base64(10)
   end
 
+
   def as_json(options = {})
     {
         :name => name,
