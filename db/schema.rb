@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_19_080908) do
+ActiveRecord::Schema.define(version: 2019_07_20_085323) do
 
   create_table "application_chats", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "client_application_id"
     t.integer "identifier_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "modifiable_attribute"
     t.index ["client_application_id"], name: "index_application_chats_on_client_application_id"
   end
 

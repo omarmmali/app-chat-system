@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       scope '/chats' do
         get '/', to: 'application_chats#index'
         post '/', to: 'application_chats#create'
+        patch '/:chat_number', to: 'application_chats#update'
       end
 
     end
