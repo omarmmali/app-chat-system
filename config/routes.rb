@@ -15,6 +15,7 @@ Rails.application.routes.draw do
           patch '/', to: 'application_chats#update'
 
           get '/messages', to: 'chat_messages#index'
+          get '/messages/:message_number', to: 'chat_messages#show'
         end
       end
 

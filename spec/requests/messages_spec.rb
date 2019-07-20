@@ -4,7 +4,7 @@ def messages_url_for(application_token, chat_number)
   "/applications/#{application_token}/chats/#{chat_number}/messages"
 end
 
-RSpec.describe "ChatsMessages", type: :request do
+RSpec.describe "ChatMessages", type: :request do
   before(:each) do
     @client_application = ClientApplication.create(:name => "test_client_application")
     @application_chat = @client_application.chats.create
@@ -28,6 +28,21 @@ RSpec.describe "ChatsMessages", type: :request do
         expect(json_response["messages"].length).to eq(2)
       end
     end
+
+    describe "GET /applications/:application_token/chats/:chat_number/messages/:message_number" do
+      it "returns the message with the given message number" do
+        chat_message = @application_chat.messages.create
+
+        messages_path = messages_url_for(@client_application.identifier_token, @application_chat.identifier_number)
+        get "#{messages_path}/#{chat_message.identifier_number}"
+
+        expect(response).to have_http_status(200)
+        json_response = JSON.parse(response.body)
+        expect(json_response["message"]).to_not be_nil
+        expect(json_response["message"]["id"]).to be_nil
+        expect(json_response["message"]["number"]).to eq(1)
+      end
+    end
   end
 
   describe "Unhappy Scenarios" do
@@ -41,7 +56,7 @@ RSpec.describe "ChatsMessages", type: :request do
       end
 
       it "returns bad request when given a non existent application token" do
-        get messages_url_for("nonexistent_token", :ignored)
+        get messages_url_for("non-existent_token", @application_chat.identifier_number)
 
         expect(response).to have_http_status(400)
         expect(response.body).to_not be_nil
@@ -49,11 +64,45 @@ RSpec.describe "ChatsMessages", type: :request do
       end
 
       it "returns bad request when given a non existent chat number" do
-        get messages_url_for(@client_application.identifier_token, "nonexistent_token")
+        get messages_url_for(@client_application.identifier_token, "non-existent_token")
 
         expect(response).to have_http_status(400)
         expect(response.body).to_not be_nil
         expect(response.body).to eq("Invalid chat number")
+      end
+    end
+
+    describe "GET /applications/:application_token/chats/:chat_number/messages/:message_number" do
+      it "returns bad request when given a non-existent application token" do
+        chat_message = @application_chat.messages.create
+        messages_url = messages_url_for("non-existent_token", @application_chat.identifier_number)
+
+        get "#{messages_url}/#{chat_message.identifier_number}"
+
+        expect(response).to have_http_status(400)
+        expect(response.body).to_not be_nil
+        expect(response.body).to eq("Invalid application token")
+      end
+
+      it "returns bad request when given a non-existent chat number" do
+        chat_message = @application_chat.messages.create
+        messages_url = messages_url_for(@client_application.identifier_token, "non-existent_token")
+
+        get "#{messages_url}/#{chat_message.identifier_number}"
+
+        expect(response).to have_http_status(400)
+        expect(response.body).to_not be_nil
+        expect(response.body).to eq("Invalid chat number")
+      end
+
+      it "returns bad request when given a non-existent message number" do
+        messages_url = messages_url_for(@client_application.identifier_token, @application_chat.identifier_number)
+
+        get "#{messages_url}/non-existent_token"
+
+        expect(response).to have_http_status(400)
+        expect(response.body).to_not be_nil
+        expect(response.body).to eq("Invalid message number")
       end
     end
   end

@@ -38,6 +38,7 @@ RSpec.describe "ClientApplicationsChats", type: :request do
         json_response = JSON.parse(response.body)
         expect(json_response["chat"]).to_not be_nil
         expect(json_response["chat"]["id"]).to be_nil
+        expect(json_response["chat"]["number"]).to eq(1)
       end
     end
 
@@ -78,7 +79,7 @@ RSpec.describe "ClientApplicationsChats", type: :request do
       end
 
       it "returns bad request when given a non existent application token" do
-        get chats_url_for("nonexistent_token")
+        get chats_url_for("non-existent_token")
 
         expect(response).to have_http_status(400)
         expect(response.body).to_not be_nil
@@ -90,7 +91,7 @@ RSpec.describe "ClientApplicationsChats", type: :request do
       it "returns bad request when given a non existent application token" do
         application_chat = @client_application.chats.create(:modifiable_attribute => "old value")
 
-        get "#{chats_url_for("nonexistent_token")}/#{application_chat.identifier_number}"
+        get "#{chats_url_for("non-existent_token")}/#{application_chat.identifier_number}"
 
         expect(response).to have_http_status(400)
         expect(response.body).to_not be_nil
@@ -100,7 +101,7 @@ RSpec.describe "ClientApplicationsChats", type: :request do
       it "returns bad request when given a non existent chat number" do
         @client_application.chats.create(:modifiable_attribute => "old value")
 
-        get "#{chats_url_for(@client_application.identifier_token)}/nonexistent_number"
+        get "#{chats_url_for(@client_application.identifier_token)}/non-existent_number"
 
         expect(response).to have_http_status(400)
         expect(response.body).to_not be_nil
@@ -109,8 +110,8 @@ RSpec.describe "ClientApplicationsChats", type: :request do
     end
 
     describe "POST /applications/:application_token/chats" do
-      it "returns bad request when given a nonexistent application token" do
-        post "/applications/nonexistent_token/chats"
+      it "returns bad request when given a non-existent application token" do
+        post "/applications/non-existent_token/chats"
 
         expect(response).to have_http_status(400)
         expect(response.body).to_not be_nil
@@ -122,7 +123,7 @@ RSpec.describe "ClientApplicationsChats", type: :request do
       it "returns bad request when given a non existent application token" do
         application_chat = @client_application.chats.create(:modifiable_attribute => "old value")
         request_body = {:chat => {:modifiable_attribute => "new value"}}
-        patch "#{chats_url_for("nonexistent_token")}/#{application_chat.identifier_number}", params: request_body
+        patch "#{chats_url_for("non-existent_token")}/#{application_chat.identifier_number}", params: request_body
 
         expect(response).to have_http_status(400)
         expect(response.body).to_not be_nil
@@ -132,7 +133,7 @@ RSpec.describe "ClientApplicationsChats", type: :request do
       it "returns bad request when given a non existent chat number" do
         @client_application.chats.create(:modifiable_attribute => "old value")
         request_body = {:chat => {:modifiable_attribute => "new value"}}
-        patch "#{chats_url_for(@client_application.identifier_token)}/nonexistent_number", params: request_body
+        patch "#{chats_url_for(@client_application.identifier_token)}/non-existent_number", params: request_body
 
         expect(response).to have_http_status(400)
         expect(response.body).to_not be_nil

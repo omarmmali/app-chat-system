@@ -57,8 +57,8 @@ RSpec.describe "ClientApplications", type: :request do
     end
 
     describe "GET /applications/:application_token" do
-      it "given a nonexistent identifier_token" do
-        get "/applications/nonexistent_token"
+      it "given a non-existent identifier_token" do
+        get "/applications/non-existent_token"
 
         expect(response).to have_http_status(404)
         expect(response.body).to eq("no client application was found with the provided identifier token")
@@ -66,8 +66,8 @@ RSpec.describe "ClientApplications", type: :request do
     end
 
     describe "PATCH /applications/:application_token" do
-      it "given a nonexistent token" do
-        patch "/applications/nonexistent_token", params: {:name => "new_application_name"}
+      it "given a non-existent token" do
+        patch "/applications/non-existent_token", params: {:name => "new_application_name"}
 
         expect(response).to have_http_status(404)
         expect(response.body).to eq("no client application was found with the provided identifier token")
