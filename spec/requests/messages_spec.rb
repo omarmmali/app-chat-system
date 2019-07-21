@@ -101,6 +101,41 @@ RSpec.describe "ChatMessages", type: :request do
       end
     end
 
+    describe "POST /applications/:application_token/chats/:chat_number/messages" do
+      it "returns bad request when given a non-existent application token" do
+        request_url = messages_url_for("non-existent_token", @application_chat.identifier_number)
+        request_data = {:message => {:text => "new text"}}
+
+        post request_url, params: request_data
+
+        expect(response).to have_http_status(400)
+        expect(response.body).to_not be_nil
+        expect(response.body).to eq("Invalid application token")
+      end
+
+      it "returns bad request when given a non-existent chat number" do
+        request_url = messages_url_for(@client_application.identifier_token, "non-existent_token")
+        request_data = {:message => {:text => "new text"}}
+
+        post request_url, params: request_data
+
+        expect(response).to have_http_status(400)
+        expect(response.body).to_not be_nil
+        expect(response.body).to eq("Invalid chat number")
+      end
+
+      it "returns bad request when not given message text value" do
+        request_url = messages_url_for(@client_application.identifier_token, @application_chat.identifier_number)
+        request_data = {:message => {}}
+
+        post request_url, params: request_data
+
+        expect(response).to have_http_status(400)
+        expect(response.body).to_not be_nil
+        expect(response.body).to eq("param is missing or the value is empty: message")
+      end
+    end
+
     describe "GET /applications/:application_token/chats/:chat_number/messages/:message_number" do
       it "returns bad request when given a non-existent application token" do
         chat_message = @application_chat.messages.create

@@ -111,7 +111,7 @@ RSpec.describe "ClientApplicationsChats", type: :request do
 
     describe "POST /applications/:application_token/chats" do
       it "returns bad request when given a non-existent application token" do
-        post "/applications/non-existent_token/chats"
+        post chats_url_for("non-existent_token")
 
         expect(response).to have_http_status(400)
         expect(response.body).to_not be_nil

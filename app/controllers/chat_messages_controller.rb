@@ -1,4 +1,6 @@
 class ChatMessagesController < ApplicationController
+  rescue_from ActionController::ParameterMissing, with: :handle_missing_parameter
+
   def index
     parent_application = ClientApplication.find_by_identifier_token(params[:client_application_token])
     handle_error_for("application token") and return unless parent_application
@@ -39,7 +41,11 @@ class ChatMessagesController < ApplicationController
 
   def create
     parent_application = ClientApplication.find_by_identifier_token(params[:client_application_token])
+    handle_error_for("application token") and return unless parent_application
+
     parent_chat = parent_application.chats.find_by(:identifier_number => params[:application_chat_number])
+    handle_error_for("chat number") and return unless parent_chat
+
     chat_message = parent_chat.messages.create(:text => message_params[:text])
     render status: :created, json: {:message => chat_message}
   end
@@ -54,4 +60,7 @@ class ChatMessagesController < ApplicationController
     render status: :bad_request, json: "Invalid #{invalid_parameter}"
   end
 
+  def handle_missing_parameter(exception)
+    render status: :bad_request, json: exception.message
+  end
 end
