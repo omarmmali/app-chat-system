@@ -29,6 +29,21 @@ RSpec.describe "ChatMessages", type: :request do
       end
     end
 
+    describe "POST /applications/:application_token/chats/:chat_number/messages" do
+      it "creates a message with given text" do
+        request_url = messages_url_for(@client_application.identifier_token, @application_chat.identifier_number)
+        request_data = {:message => {:text => "message text"}}
+        post request_url, params: request_data
+
+        expect(response).to have_http_status(201)
+        json_response = JSON.parse(response.body)
+        expect(json_response["message"]).to_not be_nil
+        expect(json_response["message"]["id"]).to be_nil
+        expect(json_response["message"]["number"]).to eq(1)
+        expect(json_response["message"]["text"]).to eq("message text")
+      end
+    end
+
     describe "GET /applications/:application_token/chats/:chat_number/messages/:message_number" do
       it "returns the message with the given message number" do
         chat_message = @application_chat.messages.create

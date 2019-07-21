@@ -5,7 +5,8 @@ class ChatMessage < ApplicationRecord
 
   def as_json(options = {})
     {
-        :number => identifier_number
+        :number => identifier_number,
+        :text => text
     }
   end
 

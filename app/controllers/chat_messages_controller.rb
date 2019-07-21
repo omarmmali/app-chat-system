@@ -37,6 +37,13 @@ class ChatMessagesController < ApplicationController
     render status: :no_content
   end
 
+  def create
+    parent_application = ClientApplication.find_by_identifier_token(params[:client_application_token])
+    parent_chat = parent_application.chats.find_by(:identifier_number => params[:application_chat_number])
+    chat_message = parent_chat.messages.create(:text => message_params[:text])
+    render status: :created, json: {:message => chat_message}
+  end
+
   private
 
   def message_params
