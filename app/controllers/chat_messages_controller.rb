@@ -13,6 +13,12 @@ class ChatMessagesController < ApplicationController
     render status: :ok, json: {:message => @chat_message}
   end
 
+  def search
+    verify_application_and_chat_tokens or return
+    chat_messages_with_required_text = get_all_messages_with_required_text
+    render status: :ok, json: {:messages => chat_messages_with_required_text}
+  end
+
   def update
     verify_application_and_chat_tokens or return
     verify_message_number or return
@@ -27,6 +33,13 @@ class ChatMessagesController < ApplicationController
   end
 
   private
+
+  def get_all_messages_with_required_text
+    ChatMessage.all.collect do |message|
+      message if message.text.include? params[:text]
+    end
+  end
+
   def verify_message_number
     @chat_message = @parent_chat.messages.find_by(:identifier_number => params[:number])
     handle_error_for("message number") and return false unless @chat_message

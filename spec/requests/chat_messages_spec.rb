@@ -13,8 +13,8 @@ RSpec.describe "ChatMessages", type: :request do
   describe "Happy Scenarios" do
     describe "GET /applications/:application_token/chats/:chat_number/messages" do
       it "returns all messages that belong to a chat" do
-        @application_chat.messages.create
-        @application_chat.messages.create
+        @application_chat.messages.create(:text => "test text")
+        @application_chat.messages.create(:text => "test text 1")
 
         get messages_url_for(@client_application.identifier_token, @application_chat.identifier_number)
 
@@ -23,8 +23,10 @@ RSpec.describe "ChatMessages", type: :request do
         expect(json_response["messages"]).to_not be_nil
         expect(json_response["messages"][0]["id"]).to be_nil
         expect(json_response["messages"][0]["number"]).to_not be_nil
+        expect(json_response["messages"][0]["text"]).to eq("test text")
         expect(json_response["messages"][1]["id"]).to be_nil
         expect(json_response["messages"][1]["number"]).to_not be_nil
+        expect(json_response["messages"][1]["text"]).to eq("test text 1")
         expect(json_response["messages"].length).to eq(2)
       end
     end
@@ -46,7 +48,7 @@ RSpec.describe "ChatMessages", type: :request do
 
     describe "GET /applications/:application_token/chats/:chat_number/messages/:message_number" do
       it "returns the message with the given message number" do
-        chat_message = @application_chat.messages.create
+        chat_message = @application_chat.messages.create(:text => "test text")
         messages_path = messages_url_for(@client_application.identifier_token, @application_chat.identifier_number)
 
         get "#{messages_path}/#{chat_message.identifier_number}"
@@ -56,10 +58,11 @@ RSpec.describe "ChatMessages", type: :request do
         expect(json_response["message"]).to_not be_nil
         expect(json_response["message"]["id"]).to be_nil
         expect(json_response["message"]["number"]).to eq(1)
+        expect(json_response["message"]["text"]).to eq("test text")
       end
     end
 
-    describe "PATCH /applications/:application_token/chats/:chat_number/messages/:message_number" do
+    describe "PATCH /applications/:application_token/chats/:chat_number/messages" do
       it "updates the message with the given message number" do
         chat_message = @application_chat.messages.create(:text => "old text")
         request_data = {:message => {:text => "new text"}}
@@ -70,6 +73,26 @@ RSpec.describe "ChatMessages", type: :request do
         expect(response).to have_http_status(204)
         chat_message.reload
         expect(chat_message.text).to eq("new text")
+      end
+    end
+
+    describe "GET /applications/:application_token/chats/:chat_number/messages/search/:text" do
+      it "returns a list of all messages where the search_term occurs" do
+        chat_message_1 = @application_chat.messages.create(:text => "this is some text to search for")
+        chat_message_2 = @application_chat.messages.create(:text => "this is some text to search for too")
+        messages_path = messages_url_for(@client_application.identifier_token, @application_chat.identifier_number)
+
+        get "#{messages_path}/search", params: {:text => "search for"}
+
+        expect(response).to have_http_status(200)
+        json_response = JSON.parse(response.body)
+        expect(json_response["messages"]).to_not be_nil
+        expect(json_response["messages"][0]["id"]).to be_nil
+        expect(json_response["messages"][0]["number"]).to eq(chat_message_1.identifier_number)
+        expect(json_response["messages"][0]["text"]).to eq(chat_message_1.text)
+        expect(json_response["messages"][1]["id"]).to be_nil
+        expect(json_response["messages"][1]["number"]).to eq(chat_message_2.identifier_number)
+        expect(json_response["messages"][1]["text"]).to eq(chat_message_2.text)
       end
     end
   end
