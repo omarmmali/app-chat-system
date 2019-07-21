@@ -35,8 +35,8 @@ class ChatMessagesController < ApplicationController
   private
 
   def get_all_messages_with_required_text
-    ChatMessage.all.collect do |message|
-      message if message.text.include? params[:text]
+    ChatMessage.all.select do |message|
+      message.text.include? params[:text] || ''
     end
   end
 
