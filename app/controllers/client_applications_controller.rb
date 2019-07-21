@@ -2,7 +2,7 @@ class ClientApplicationsController < ApplicationController
   rescue_from ActionController::ParameterMissing, with: :handle_missing_parameter
 
   def create
-    client_application = ClientApplication.new(:name => client_application_params)
+    client_application = ClientApplication.new(:name => client_application_params[:name])
     client_application.save
     render status: :created, json: {:application => client_application}
   end
@@ -17,7 +17,7 @@ class ClientApplicationsController < ApplicationController
     client_application = ClientApplication.find_by_identifier_token(params[:token])
     handle_entity_not_found and return unless client_application
 
-    client_application.update(:name => client_application_params)
+    client_application.update(:name => client_application_params[:name])
     render status: :no_content
   end
 
@@ -32,6 +32,6 @@ class ClientApplicationsController < ApplicationController
   end
 
   def client_application_params
-    params.require(:name)
+    params.require(:application).permit(:name)
   end
 end
