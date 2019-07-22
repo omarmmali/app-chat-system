@@ -19,10 +19,16 @@ services:
       - "1234:1234"
     depends_on:
       - db_mysql
+      - elasticsearch
     volumes:
       - .:/chat_app
     tty: true
     environment:
-      WAIT_HOSTS: db_mysql:3306
+      WAIT_HOSTS: db_mysql:3306, elasticsearch:9200
       APPLICATION_PORT: 3000
       DEBUGGING_PORT: 1234
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.4.2
+    ports:
+      - "9200:9200"

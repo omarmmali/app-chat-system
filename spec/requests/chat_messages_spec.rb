@@ -76,8 +76,8 @@ RSpec.describe "ChatMessages", type: :request do
       end
     end
 
-    describe "GET /applications/:application_token/chats/:chat_number/messages/search/:text" do
-      it "returns a list of all messages where the search_term occurs" do
+    describe "GET /applications/:application_token/chats/:chat_number/messages/search/:text", skip: true do
+      it "returns a list of all messages where the search_term occurs", elasticsearch: true do
         chat_message_1 = @application_chat.messages.create(:text => "this is some text to search for")
         chat_message_2 = @application_chat.messages.create(:text => "this is some text to search for too")
         @application_chat.messages.create(:text => "this is some text")
@@ -232,7 +232,7 @@ RSpec.describe "ChatMessages", type: :request do
       end
     end
 
-    describe "GET /applications/:application_token/chats/:chat_number/messages/search/:text" do
+    describe "GET /applications/:application_token/chats/:chat_number/messages/search/:text", skip: true do
       it "returns an empty list when no matches are found" do
         @application_chat.messages.create(:text => "this is some text to search for")
         @application_chat.messages.create(:text => "this is some text to search for too")

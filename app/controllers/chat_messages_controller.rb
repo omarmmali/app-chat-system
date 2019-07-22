@@ -15,8 +15,7 @@ class ChatMessagesController < ApplicationController
 
   def search
     verify_application_and_chat_tokens or return
-    chat_messages_with_required_text = get_all_messages_with_required_text
-    render status: :ok, json: {:messages => chat_messages_with_required_text}
+    render status: :ok, json: {:messages => get_all_messages_with_required_text}
   end
 
   def update
@@ -35,9 +34,7 @@ class ChatMessagesController < ApplicationController
   private
 
   def get_all_messages_with_required_text
-    ChatMessage.all.select do |message|
-      message.text.include? params[:text] || ''
-    end
+    @parent_chat.messages.search(params[:text] || '').records.to_a
   end
 
   def verify_message_number
