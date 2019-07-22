@@ -8,7 +8,7 @@ end
 RSpec.describe "ChatMessages", type: :request do
   before(:each) do
     @client_application = ClientApplication.create(:name => "test_client_application")
-    @application_chat = @client_application.chats.create
+    @application_chat = @client_application.chats.create(identifier_number: 1)
   end
 
 

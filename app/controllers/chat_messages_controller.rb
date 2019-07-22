@@ -29,15 +29,17 @@ class ChatMessagesController < ApplicationController
 
   def create
     verify_application_and_chat_tokens or return
-    WorkQueue.enqueue_job(get_message_body)
-    render status: :created, json: get_message_body
+    parent_chat_messages = @parent_chat.messages
+    WorkQueue.enqueue_job(message_body(parent_chat_messages))
+    render status: :created, json: message_body(parent_chat_messages)
   end
 
   private
 
-  def get_message_body
-    {message: @parent_chat.messages.new(identifier_number: @parent_chat.messages.count + 1, text: message_params[:text])}
+  def message_body(parent_chat_messages)
+    {message: parent_chat_messages.new(identifier_number: parent_chat_messages.count + 1, text: message_params[:text])}
   end
+
 
   def get_all_messages_with_required_text
     @parent_chat.messages.search(params[:text] || '').records.to_a

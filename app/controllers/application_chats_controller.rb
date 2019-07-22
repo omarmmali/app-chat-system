@@ -1,3 +1,5 @@
+require 'work_queue'
+
 class ApplicationChatsController < ApplicationController
   def index
     verify_application_token or return
@@ -7,8 +9,9 @@ class ApplicationChatsController < ApplicationController
 
   def create
     verify_application_token or return
-    created_chat = @parent_application.chats.create
-    render status: :created, json: {:chat => created_chat}
+    parent_chats = @parent_application.chats
+    WorkQueue.enqueue_job(chat_body(parent_chats))
+    render status: :created, json: chat_body(parent_chats)
   end
 
   def update
@@ -27,6 +30,11 @@ class ApplicationChatsController < ApplicationController
   end
 
   private
+
+  def chat_body(parent_chats)
+    {chat: parent_chats.new(identifier_number: parent_chats.count + 1)}
+  end
+
 
   def verify_application_token
     @parent_application = ClientApplication.find_by_identifier_token(params[:client_application_token])
