@@ -4,7 +4,7 @@ class ApplicationChatsController < ApplicationController
   def index
     verify_application_token or return
     application_chats = @parent_application.chats
-    render status: :ok, json: {:chats => application_chats}
+    render status: :ok, json: {chats: application_chats}
   end
 
   def create
@@ -26,7 +26,7 @@ class ApplicationChatsController < ApplicationController
   def show
     verify_application_token or return
     verify_chat_number or return
-    render status: :ok, json: {:chat => @application_chat}
+    render status: :ok, json: {chat: @application_chat}
   end
 
   private

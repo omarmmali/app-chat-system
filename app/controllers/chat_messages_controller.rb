@@ -6,18 +6,18 @@ class ChatMessagesController < ApplicationController
   def index
     verify_application_and_chat_tokens or return
     chat_messages = @parent_chat.messages
-    render status: :ok, json: {:messages => chat_messages}
+    render status: :ok, json: {messages: chat_messages}
   end
 
   def show
     verify_application_and_chat_tokens or return
     verify_message_number or return
-    render status: :ok, json: {:message => @chat_message}
+    render status: :ok, json: {message: @chat_message}
   end
 
   def search
     verify_application_and_chat_tokens or return
-    render status: :ok, json: {:messages => get_all_messages_with_required_text}
+    render status: :ok, json: {messages: get_all_messages_with_required_text}
   end
 
   def update

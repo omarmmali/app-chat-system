@@ -5,7 +5,7 @@ RSpec.describe "ClientApplications", type: :request do
     describe "POST /applications" do
       it "creates an application" do
         application_name = "test_application_name"
-        post "/applications", params: {:application => {:name => application_name}}
+        post "/applications", params: {application: {:name => application_name}}
 
         expect(response).to have_http_status(201)
         json_response_body = JSON.parse(response.body)
@@ -19,7 +19,7 @@ RSpec.describe "ClientApplications", type: :request do
     describe "GET /applications/:application_token" do
       it "gets a client application by identifier token" do
         application_name = "test_client_application"
-        current_client_application = ClientApplication.create(:name => application_name)
+        current_client_application = ClientApplication.create(name: application_name)
 
         get "/applications/#{current_client_application.identifier_token}"
 
@@ -35,7 +35,7 @@ RSpec.describe "ClientApplications", type: :request do
     describe "PATCH /applications/:application_token" do
       it "edits a client application" do
         application_name = "test_client_application"
-        current_client_application = ClientApplication.create(:name => application_name)
+        current_client_application = ClientApplication.create(name: application_name)
 
         new_application_name = "new_test_client_application"
         patch "/applications/#{current_client_application.identifier_token}", params: {:application => {:name => new_application_name}}
@@ -50,7 +50,7 @@ RSpec.describe "ClientApplications", type: :request do
   describe "Unhappy Scenarios" do
     describe "POST /applications" do
       it "not given a name" do
-        post "/applications", params: {:application => {:name => {}}}
+        post "/applications", params: {application: {name: {}}}
         expect(response).to have_http_status(400)
         expect(response.body).to eq('param is missing or the value is empty: application')
       end
@@ -67,7 +67,7 @@ RSpec.describe "ClientApplications", type: :request do
 
     describe "PATCH /applications/:application_token" do
       it "given a non-existent token" do
-        patch "/applications/non-existent_token", params: {:application => {:name => "new_application_name"}}
+        patch "/applications/non-existent_token", params: {application: {name: "new_application_name"}}
 
         expect(response).to have_http_status(404)
         expect(response.body).to eq("no client application was found with the provided identifier token")
@@ -75,7 +75,7 @@ RSpec.describe "ClientApplications", type: :request do
 
       it "not given a name" do
         application_name = "test_client_application"
-        current_client_application = ClientApplication.create(:name => application_name)
+        current_client_application = ClientApplication.create(name: application_name)
 
         patch "/applications/#{current_client_application.identifier_token}", params: {:application => {:name => {}}}
 

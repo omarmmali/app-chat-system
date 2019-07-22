@@ -4,17 +4,17 @@ class ClientApplicationsController < ApplicationController
   def create
     client_application = ClientApplication.new(:name => client_application_params[:name])
     client_application.save
-    render status: :created, json: {:application => client_application}
+    render status: :created, json: {application: client_application}
   end
 
   def show
     verify_application_token or return
-    render status: :ok, json: {:application => @client_application}
+    render status: :ok, json: {application: @client_application}
   end
 
   def update
     verify_application_token or return
-    @client_application.update(:name => client_application_params[:name])
+    @client_application.update(name: client_application_params[:name])
     render status: :no_content
   end
 

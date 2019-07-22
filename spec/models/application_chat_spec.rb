@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe ApplicationChat, type: :model do
   it "returns application token when transformed to json" do
-    client_application = ClientApplication.create(:name => "test_client_application")
+    client_application = ClientApplication.create(name: "test_client_application")
 
     chat = client_application.chats.create
 

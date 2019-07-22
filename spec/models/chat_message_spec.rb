@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe ChatMessage, type: :model do
   it "returns application token and chat number when transformed to json" do
-    client_application = ClientApplication.create(:name => "test_client_application")
+    client_application = ClientApplication.create(name: "test_client_application")
     application_chat = client_application.chats.create
 
     message = application_chat.messages.create
