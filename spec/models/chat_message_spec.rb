@@ -1,13 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe ChatMessage, type: :model do
-  it "creates an identifier number on creation" do
+  it "returns application token and chat number when transformed to json" do
     client_application = ClientApplication.create(:name => "test_client_application")
     application_chat = client_application.chats.create
 
     message = application_chat.messages.create
 
-    expect(message.identifier_number).to_not be_nil
-    expect(message.identifier_number).to eq(1)
+    message_as_json = message.as_json
+    expect(message_as_json[:application_token]).to eq(client_application.identifier_token)
+    expect(message_as_json[:chat_number]).to eq(application_chat.identifier_number)
   end
 end

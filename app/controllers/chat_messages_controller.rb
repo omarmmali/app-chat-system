@@ -1,3 +1,5 @@
+require 'work_queue'
+
 class ChatMessagesController < ApplicationController
   rescue_from ActionController::ParameterMissing, with: :handle_missing_parameter
 
@@ -27,11 +29,15 @@ class ChatMessagesController < ApplicationController
 
   def create
     verify_application_and_chat_tokens or return
-    chat_message = @parent_chat.messages.create(:text => message_params[:text])
-    render status: :created, json: {:message => chat_message}
+    WorkQueue.enqueue_job(get_message_body)
+    render status: :created, json: get_message_body
   end
 
   private
+
+  def get_message_body
+    {message: @parent_chat.messages.new(identifier_number: @parent_chat.messages.count + 1, text: message_params[:text])}
+  end
 
   def get_all_messages_with_required_text
     @parent_chat.messages.search(params[:text] || '').records.to_a

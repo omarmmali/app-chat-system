@@ -24,7 +24,7 @@ services:
       - .:/chat_app
     tty: true
     environment:
-      WAIT_HOSTS: db_mysql:3306, elasticsearch:9200
+      WAIT_HOSTS: db_mysql:3306, elasticsearch:9200, rabbitmq:5672
       APPLICATION_PORT: 3000
       DEBUGGING_PORT: 1234
 
@@ -32,3 +32,6 @@ services:
     image: docker.elastic.co/elasticsearch/elasticsearch:6.4.2
     ports:
       - "9200:9200"
+
+  rabbitmq:
+    image: rabbitmq:3.7

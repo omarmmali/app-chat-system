@@ -6,12 +6,12 @@ class ChatMessage < ApplicationRecord
 
   belongs_to :application_chat
 
-  before_create :generate_identifier_number
-
   def as_json(options = {})
     {
-        :number => identifier_number,
-        :text => text
+        application_token: self.application_chat.client_application.identifier_token,
+        chat_number: self.application_chat.identifier_number,
+        number: identifier_number,
+        text: text
     }
   end
 
@@ -20,12 +20,6 @@ class ChatMessage < ApplicationRecord
 
         text: text
     }
-  end
-
-  private
-
-  def generate_identifier_number
-    self.identifier_number = self.application_chat.messages.count + 1
   end
 end
 
