@@ -19,6 +19,7 @@ class ApplicationChatsController < ApplicationController
   def update
     verify_application_token or return
     verify_chat_number or return
+    verify_lock_version or return
 
     @application_chat.assign_attributes(chat_params)
     WorkQueue.enqueue_job({chat: @application_chat})
@@ -33,6 +34,12 @@ class ApplicationChatsController < ApplicationController
   end
 
   private
+
+  def verify_lock_version
+    render status: :precondition_failed and return false unless @application_chat.lock_version == chat_params[:lock_version].to_i
+
+    true
+  end
 
   def chat_body(parent_chats)
     {chat: parent_chats.new(identifier_number: parent_chats.count + 1)}
@@ -58,7 +65,7 @@ class ApplicationChatsController < ApplicationController
   end
 
   def chat_params
-    params.require(:chat).permit(:modifiable_attribute)
+    params.require(:chat).permit(:modifiable_attribute, :lock_version)
   end
 
 end

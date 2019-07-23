@@ -63,6 +63,7 @@ RSpec.describe "ClientApplicationsChats Unhappy Scenarios", type: :request do
     it "returns bad request when given a non existent application token" do
       application_chat = @client_application.chats.create(identifier_number: 1, modifiable_attribute: "old value")
       request_body = {chat: {modifiable_attribute: "new value"}}
+
       patch "#{chats_url_for("non-existent_token")}/#{application_chat.identifier_number}", params: request_body
 
       expect(response).to have_http_status(400)
@@ -72,12 +73,24 @@ RSpec.describe "ClientApplicationsChats Unhappy Scenarios", type: :request do
 
     it "returns bad request when given a non existent chat number" do
       @client_application.chats.create(identifier_number: 1, modifiable_attribute: "old value")
-      request_body = {chat:{modifiable_attribute: "new value"}}
+      request_body = {chat: {modifiable_attribute: "new value"}}
       patch "#{chats_url_for(@client_application.identifier_token)}/non-existent_number", params: request_body
 
       expect(response).to have_http_status(400)
       expect(response.body).to_not be_nil
       expect(response.body).to eq("Invalid chat number")
+    end
+
+    describe "optimistic lock" do
+      it "returns 412 if trying to update a stale object" do
+        application_chat = @client_application.chats.create(identifier_number: 1, modifiable_attribute: "old value")
+        request_body = {chat: {modifiable_attribute: "new value", lock_version: application_chat.lock_version}}
+        application_chat.update(modifiable_attribute: "not so new, but not so old modifiable value")
+
+        patch "#{chats_url_for(@client_application.identifier_token)}/#{application_chat.identifier_number}", params: request_body
+
+        expect(response).to have_http_status(412)
+      end
     end
   end
 end
