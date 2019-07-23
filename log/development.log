@@ -9099,3 +9099,11 @@ Processing by ClientApplicationsController#create as */*
 Completed 201 Created in 15ms (Views: 0.3ms | ActiveRecord: 3.1ms)
 
 
+  [1m[36mClientApplication Load (2.1ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'K6jMCXdMjS88lA' LIMIT 1[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[36mClientApplication Load (0.8ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'SB-D_eWbj3ebUQ' LIMIT 1[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'amwsK4doYp3zRQ' LIMIT 1[0m
+  ↳ app/workers/queue_worker.rb:12
+  [1m[36mClientApplication Load (0.8ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'zevIw-C-injWNw' LIMIT 1[0m
+  ↳ app/workers/queue_worker.rb:12

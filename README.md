@@ -20,6 +20,6 @@ the queued jobs.
 ```docker-compose up```
 ## How to run the test suite
 * Go into the docker application container   
-```docker exec -it rails-chat-app_application_1 /bin/bash```
+```docker exec -it example-container-name_1 /bin/bash```
 * Run   
 ```rspec```
