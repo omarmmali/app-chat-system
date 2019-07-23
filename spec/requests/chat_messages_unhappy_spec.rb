@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'bunny'
 
 def messages_url_for(application_token, chat_number)
   "/applications/#{application_token}/chats/#{chat_number}/messages"
@@ -141,31 +140,18 @@ RSpec.describe "ChatMessages Unhappy Scenarios", type: :request do
       expect(response.body).to_not be_nil
       expect(response.body).to eq("Invalid message number")
     end
-  end
 
-  describe "GET /applications/:application_token/chats/:chat_number/messages/search/:text", elasticsearch: true, skip: true do
-    it "returns an empty list when no matches are found" do
-      @application_chat.messages.create(text: "this is some text to search for")
-      @application_chat.messages.create(text: "this is some text to search for too")
-      messages_path = messages_url_for(@client_application.identifier_token, @application_chat.identifier_number)
+    describe "optimistic lock" do
+      it "returns 412 if trying to update a stale object" do
+        chat_message = @application_chat.messages.create(identifier_number: 1, text: "old text")
+        messages_url = messages_url_for(@client_application.identifier_token, @application_chat.identifier_number)
+        request_data = {message: {text: "new text", lock_version: chat_message.lock_version}}
+        chat_message.update(text: "not so new, but not so old text")
 
-      get "#{messages_path}/search", params: {text: "not search for"}
+        patch "#{messages_url}/#{chat_message.identifier_number}", params: request_data
 
-      expect(response).to have_http_status(200)
-      json_response = JSON.parse(response.body)
-      expect(json_response["messages"].length).to eq(0)
-    end
-
-    it "returns all messages if no text is given" do
-      @application_chat.messages.create(text: "this is some text to search for")
-      @application_chat.messages.create(text: "this is some text to search for too")
-      messages_path = messages_url_for(@client_application.identifier_token, @application_chat.identifier_number)
-
-      get "#{messages_path}/search", params: {}
-
-      expect(response).to have_http_status(200)
-      json_response = JSON.parse(response.body)
-      expect(json_response["messages"].length).to eq(2)
+        expect(response).to have_http_status(412)
+      end
     end
   end
 end

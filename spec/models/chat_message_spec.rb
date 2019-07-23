@@ -10,5 +10,6 @@ RSpec.describe ChatMessage, type: :model do
     message_as_json = message.as_json
     expect(message_as_json[:application_token]).to eq(client_application.identifier_token)
     expect(message_as_json[:chat_number]).to eq(application_chat.identifier_number)
+    expect(message_as_json[:lock_version]).to_not be_nil
   end
 end

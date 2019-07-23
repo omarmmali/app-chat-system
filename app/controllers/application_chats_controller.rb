@@ -10,7 +10,9 @@ class ApplicationChatsController < ApplicationController
   def create
     verify_application_token or return
     parent_chats = @parent_application.chats
+
     WorkQueue.enqueue_job(chat_body(parent_chats))
+
     render status: :created, json: chat_body(parent_chats)
   end
 

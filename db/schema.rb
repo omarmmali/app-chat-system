@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_21_100447) do
+ActiveRecord::Schema.define(version: 2019_07_23_073709) do
 
   create_table "application_chats", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "client_application_id"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2019_07_21_100447) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "modifiable_attribute"
+    t.integer "lock_version"
     t.index ["client_application_id"], name: "index_application_chats_on_client_application_id"
     t.index ["identifier_number"], name: "index_application_chats_on_identifier_number"
   end
@@ -28,6 +29,7 @@ ActiveRecord::Schema.define(version: 2019_07_21_100447) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "text"
+    t.integer "lock_version"
     t.index ["application_chat_id"], name: "index_chat_messages_on_application_chat_id"
     t.index ["identifier_number"], name: "index_chat_messages_on_identifier_number"
   end

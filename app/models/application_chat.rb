@@ -7,7 +7,8 @@ class ApplicationChat < ApplicationRecord
   def as_json(options = {})
     {
         application_token: self.client_application.identifier_token,
-        number: identifier_number
+        number: identifier_number,
+        lock_version: lock_version
     }
   end
 end

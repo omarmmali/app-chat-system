@@ -8,5 +8,6 @@ RSpec.describe ApplicationChat, type: :model do
 
     chat_as_json = chat.as_json
     expect(chat_as_json[:application_token]).to eq(client_application.identifier_token)
+    expect(chat_as_json[:lock_version]).to_not be_nil
   end
 end

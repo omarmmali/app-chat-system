@@ -23,15 +23,20 @@ class ChatMessagesController < ApplicationController
   def update
     verify_application_and_chat_tokens or return
     verify_message_number or return
+    verify_lock_version or return
+
     @chat_message.assign_attributes(message_params)
     WorkQueue.enqueue_job({message: @chat_message})
+
     render status: :no_content
   end
 
   def create
     verify_application_and_chat_tokens or return
+
     parent_chat_messages = @parent_chat.messages
     WorkQueue.enqueue_job(message_body(parent_chat_messages))
+
     render status: :created, json: message_body(parent_chat_messages)
   end
 
@@ -44,6 +49,12 @@ class ChatMessagesController < ApplicationController
 
   def get_all_messages_with_required_text
     @parent_chat.messages.search(params[:text] || '').records.to_a
+  end
+
+  def verify_lock_version
+    render status: :precondition_failed and return false unless @chat_message.lock_version == message_params[:lock_version].to_i
+
+    true
   end
 
   def verify_message_number
@@ -64,7 +75,7 @@ class ChatMessagesController < ApplicationController
   end
 
   def message_params
-    params.require(:message).permit(:text)
+    params.require(:message).permit(:text, :lock_version)
   end
 
   def handle_error_for(invalid_parameter)

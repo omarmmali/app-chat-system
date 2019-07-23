@@ -11,7 +11,8 @@ class ChatMessage < ApplicationRecord
         application_token: self.application_chat.client_application.identifier_token,
         chat_number: self.application_chat.identifier_number,
         number: identifier_number,
-        text: text
+        text: text,
+        lock_version: lock_version
     }
   end
 
