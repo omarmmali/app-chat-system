@@ -5,6 +5,13 @@ def messages_url_for(application_token, chat_number)
   "/applications/#{application_token}/chats/#{chat_number}/messages"
 end
 
+def create_empty_queue
+  @connection = Bunny.new(hostname: 'rabbitmq:5672').start
+  @channel = @connection.create_channel
+  @queue = @channel.queue('jobs')
+  @queue.purge
+end
+
 RSpec.describe "ChatMessages Happy Scenarios", type: :request do
   before(:each) do
     @client_application = ClientApplication.create(name: "test_client_application")
@@ -33,16 +40,9 @@ RSpec.describe "ChatMessages Happy Scenarios", type: :request do
   end
 
   describe "POST /applications/:application_token/chats/:chat_number/messages" do
-    before(:each) do
-      @connection = Bunny.new(hostname: 'rabbitmq:5672').start
-      @channel = @connection.create_channel
-      @queue = @channel.queue('jobs')
-      @queue.purge
-    end
+    before(:each) {create_empty_queue}
 
-    after(:each) do
-      @connection.close
-    end
+    after(:each) {@connection.close}
 
     it "creates a message with given text" do
       request_url = messages_url_for(@client_application.identifier_token, @application_chat.identifier_number)
@@ -98,6 +98,10 @@ RSpec.describe "ChatMessages Happy Scenarios", type: :request do
   end
 
   describe "PATCH /applications/:application_token/chats/:chat_number/messages" do
+    before(:each) {create_empty_queue}
+
+    after(:each) {@connection.close}
+
     it "updates the message with the given message number" do
       chat_message = @application_chat.messages.create(identifier_number: 1, text: "old text")
       request_data = {message: {text: "new text"}}
@@ -106,8 +110,23 @@ RSpec.describe "ChatMessages Happy Scenarios", type: :request do
       patch "#{messages_path}/#{chat_message.identifier_number}", params: request_data
 
       expect(response).to have_http_status(204)
-      chat_message.reload
-      expect(chat_message.text).to eq("new text")
+    end
+
+    it "sends an edit message request to work queue" do
+      chat_message = @application_chat.messages.create(identifier_number: 1, text: "old text")
+      request_data = {message: {text: "new text"}}
+      messages_path = messages_url_for(@client_application.identifier_token, @application_chat.identifier_number)
+
+      patch "#{messages_path}/#{chat_message.identifier_number}", params: request_data
+
+      expect(response).to have_http_status(204)
+      expect(@queue.message_count).to eq(1)
+      _, _, queued_message = @queue.pop
+      queued_message = JSON.parse(queued_message)
+      expect(queued_message["message"]["application_token"]).to eq(@client_application.identifier_token)
+      expect(queued_message["message"]["chat_number"]).to eq(@application_chat.identifier_number)
+      expect(queued_message["message"]["number"]).to eq(1)
+      expect(queued_message["message"]["text"]).to eq("new text")
     end
   end
 

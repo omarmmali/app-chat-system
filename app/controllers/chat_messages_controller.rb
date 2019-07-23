@@ -23,7 +23,8 @@ class ChatMessagesController < ApplicationController
   def update
     verify_application_and_chat_tokens or return
     verify_message_number or return
-    @chat_message.update(message_params)
+    @chat_message.assign_attributes(message_params)
+    WorkQueue.enqueue_job({message: @chat_message})
     render status: :no_content
   end
 
