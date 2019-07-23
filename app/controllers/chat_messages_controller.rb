@@ -1,4 +1,4 @@
-require 'work_queue'
+require 'assets/work_queue'
 
 class ChatMessagesController < ApplicationController
   rescue_from ActionController::ParameterMissing, with: :handle_missing_parameter
@@ -26,7 +26,7 @@ class ChatMessagesController < ApplicationController
     verify_lock_version or return
 
     @chat_message.assign_attributes(message_params)
-    WorkQueue.enqueue_job({message: @chat_message})
+    WorkQueue.enqueue_job({type: "edit", message: @chat_message})
 
     render status: :no_content
   end
@@ -35,15 +35,15 @@ class ChatMessagesController < ApplicationController
     verify_application_and_chat_tokens or return
 
     parent_chat_messages = @parent_chat.messages
-    WorkQueue.enqueue_job(message_body(parent_chat_messages))
+    WorkQueue.enqueue_job({type: "create", message: message_body(parent_chat_messages)})
 
-    render status: :created, json: message_body(parent_chat_messages)
+    render status: :created, json: {message: message_body(parent_chat_messages)}
   end
 
   private
 
   def message_body(parent_chat_messages)
-    {message: parent_chat_messages.new(identifier_number: parent_chat_messages.count + 1, text: message_params[:text])}
+    parent_chat_messages.new(identifier_number: parent_chat_messages.count + 1, text: message_params[:text])
   end
 
 

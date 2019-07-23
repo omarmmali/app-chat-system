@@ -78,6 +78,7 @@ RSpec.describe "ChatMessages Happy Scenarios", type: :request do
       expect(queued_message["message"]["chat_number"]).to eq(@application_chat.identifier_number)
       expect(queued_message["message"]["number"]).to eq(1)
       expect(queued_message["message"]["text"]).to eq(message_text)
+      expect(queued_message["type"]).to eq("create")
     end
   end
 
@@ -94,6 +95,7 @@ RSpec.describe "ChatMessages Happy Scenarios", type: :request do
       expect(json_response["message"]["id"]).to be_nil
       expect(json_response["message"]["number"]).to eq(1)
       expect(json_response["message"]["text"]).to eq("test text")
+
     end
   end
 
@@ -127,6 +129,7 @@ RSpec.describe "ChatMessages Happy Scenarios", type: :request do
       expect(queued_message["message"]["chat_number"]).to eq(@application_chat.identifier_number)
       expect(queued_message["message"]["number"]).to eq(1)
       expect(queued_message["message"]["text"]).to eq("new text")
+      expect(queued_message["type"]).to eq("edit")
     end
   end
 end

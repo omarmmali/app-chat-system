@@ -1,4 +1,4 @@
-require 'work_queue'
+require 'assets/work_queue'
 
 class ApplicationChatsController < ApplicationController
   def index
@@ -11,9 +11,9 @@ class ApplicationChatsController < ApplicationController
     verify_application_token or return
     parent_chats = @parent_application.chats
 
-    WorkQueue.enqueue_job(chat_body(parent_chats))
+    WorkQueue.enqueue_job({type: "create", chat: chat_body(parent_chats)})
 
-    render status: :created, json: chat_body(parent_chats)
+    render status: :created, json: {chat: chat_body(parent_chats)}
   end
 
   def update
@@ -22,7 +22,7 @@ class ApplicationChatsController < ApplicationController
     verify_lock_version or return
 
     @application_chat.assign_attributes(chat_params)
-    WorkQueue.enqueue_job({chat: @application_chat})
+    WorkQueue.enqueue_job({type: "edit", chat: @application_chat})
 
     render status: :no_content
   end
@@ -42,7 +42,7 @@ class ApplicationChatsController < ApplicationController
   end
 
   def chat_body(parent_chats)
-    {chat: parent_chats.new(identifier_number: parent_chats.count + 1)}
+    parent_chats.new(identifier_number: parent_chats.count + 1)
   end
 
 

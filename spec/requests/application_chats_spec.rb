@@ -84,6 +84,7 @@ RSpec.describe "ClientApplicationsChats Happy Scenarios", type: :request do
       queued_message = JSON.parse(queued_message)
       expect(queued_message["chat"]["application_token"]).to eq(@client_application.identifier_token)
       expect(queued_message["chat"]["number"]).to eq(1)
+      expect(queued_message["type"]).to eq("create")
     end
   end
 
@@ -113,6 +114,7 @@ RSpec.describe "ClientApplicationsChats Happy Scenarios", type: :request do
       queued_message = JSON.parse(queued_message)
       expect(queued_message["chat"]["application_token"]).to eq(@client_application.identifier_token)
       expect(queued_message["chat"]["number"]).to eq(1)
+      expect(queued_message["type"]).to eq("edit")
     end
   end
 end
