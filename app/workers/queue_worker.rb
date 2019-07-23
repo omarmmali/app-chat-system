@@ -29,6 +29,7 @@ class QueueWorker
         text: parsed_message_body["message"]["text"],
         identifier_number: parsed_message_body["message"]["number"]
     )
+    increment_parent_chat_message_count(parent_chat)
   end
 
   def handle_message(parent_application, parsed_message_body)
@@ -47,6 +48,8 @@ class QueueWorker
 
   def create_chat(parent_application, parsed_message_body)
     parent_application.chats.create(identifier_number: parsed_message_body["chat"]["number"])
+
+    increment_parent_application_chat_count(parent_application)
   end
 
   def handle_chat(parent_application, parsed_message_body)
@@ -55,5 +58,17 @@ class QueueWorker
     else
       create_chat(parent_application, parsed_message_body)
     end
+  end
+
+  private
+
+  def increment_parent_application_chat_count(parent_application)
+    parent_application.chat_count += 1
+    parent_application.save
+  end
+
+  def increment_parent_chat_message_count(parent_chat)
+    parent_chat.message_count += 1
+    parent_chat.save
   end
 end

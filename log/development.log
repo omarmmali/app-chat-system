@@ -7359,3 +7359,1429 @@ Completed 200 OK in 7ms (Views: 3.0ms | ActiveRecord: 1.2ms)
   ↳ app/workers/queue_worker.rb:12
   [1m[36mClientApplication Load (1.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'Sz49i_L0sz8m_A' LIMIT 1[0m
   ↳ app/workers/queue_worker.rb:12
+  [1m[35m (1.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT GET_LOCK('1995621262938037875', 0)[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to AddChatCountToApplication (20190723142321)
+  [1m[35m (44.1ms)[0m  [1m[35mALTER TABLE `client_applications` ADD `chat_count` int DEFAULT 0[0m
+  ↳ db/migrate/20190723142321_add_chat_count_to_application.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190723142321')[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to AddMessagesCountToChat (20190723142332)
+  [1m[35m (15.5ms)[0m  [1m[35mALTER TABLE `application_chats` ADD `message_count` int DEFAULT 0[0m
+  ↳ db/migrate/20190723142332_add_messages_count_to_chat.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190723142332')[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT RELEASE_LOCK('1995621262938037875')[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('1995621262938037875', 0)[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('1995621262938037875')[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Started POST "/applications" for 172.28.0.1 at 2019-07-23 14:33:15 +0000
+  [1m[35m (2.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ClientApplicationsController#create as */*
+  Parameters: {"application"=>{"name"=>"test app"}, "client_application"=>{}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/client_applications_controller.rb:6
+  [1m[36mClientApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test app', '4ww8Ae3o3toSNA', '2019-07-23 14:33:16', '2019-07-23 14:33:16')[0m
+  ↳ app/controllers/client_applications_controller.rb:6
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/client_applications_controller.rb:6
+Completed 201 Created in 15ms (Views: 0.3ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/applications/4ww8Ae3o3toSNA/chats" for 172.28.0.1 at 2019-07-23 14:33:21 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"4ww8Ae3o3toSNA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '4ww8Ae3o3toSNA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 56ms (Views: 0.6ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/applications/4ww8Ae3o3toSNA/chats" for 172.28.0.1 at 2019-07-23 14:33:23 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"4ww8Ae3o3toSNA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.7ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '4ww8Ae3o3toSNA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 20ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/applications/4ww8Ae3o3toSNA/chats" for 172.28.0.1 at 2019-07-23 14:33:24 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"4ww8Ae3o3toSNA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (1.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '4ww8Ae3o3toSNA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 27ms (Views: 0.2ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/applications/4ww8Ae3o3toSNA/chats" for 172.28.0.1 at 2019-07-23 14:33:24 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"4ww8Ae3o3toSNA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.9ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '4ww8Ae3o3toSNA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 16ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/applications/4ww8Ae3o3toSNA/chats" for 172.28.0.1 at 2019-07-23 14:33:25 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"4ww8Ae3o3toSNA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.7ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '4ww8Ae3o3toSNA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 23ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/applications/WMIPmyXUIcs9ew/chats" for 172.28.0.1 at 2019-07-23 14:33:36 +0000
+Processing by ApplicationChatsController#index as */*
+  Parameters: {"client_application_token"=>"WMIPmyXUIcs9ew"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'WMIPmyXUIcs9ew' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 400 Bad Request in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/applications/4ww8Ae3o3toSNA/chats" for 172.28.0.1 at 2019-07-23 14:33:39 +0000
+Processing by ApplicationChatsController#index as */*
+  Parameters: {"client_application_token"=>"4ww8Ae3o3toSNA"}
+  [1m[36mClientApplication Load (1.0ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '4ww8Ae3o3toSNA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+  [1m[36mApplicationChat Load (0.5ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 1[0m
+  ↳ app/controllers/application_chats_controller.rb:7
+Completed 200 OK in 8ms (Views: 2.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/applications/4ww8Ae3o3toSNA/chats" for 172.28.0.1 at 2019-07-23 14:33:40 +0000
+Processing by ApplicationChatsController#index as */*
+  Parameters: {"client_application_token"=>"4ww8Ae3o3toSNA"}
+  [1m[36mClientApplication Load (0.7ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '4ww8Ae3o3toSNA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+  [1m[36mApplicationChat Load (0.6ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 1[0m
+  ↳ app/controllers/application_chats_controller.rb:7
+Completed 200 OK in 9ms (Views: 3.5ms | ActiveRecord: 1.3ms)
+
+
+  [1m[35m (1.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/models/chat_message.rb:29
+  [1m[36mChatMessage Load (0.4ms)[0m  [1m[34mSELECT  `chat_messages`.* FROM `chat_messages` ORDER BY `chat_messages`.`id` ASC LIMIT 1000[0m
+  ↳ app/models/chat_message.rb:29
+Started POST "/applications/4ww8Ae3o3toSNA/chats" for 172.28.0.1 at 2019-07-23 14:34:14 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"4ww8Ae3o3toSNA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '4ww8Ae3o3toSNA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 16ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/applications/4ww8Ae3o3toSNA/chats" for 172.28.0.1 at 2019-07-23 14:34:15 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"4ww8Ae3o3toSNA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '4ww8Ae3o3toSNA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 17ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/applications/4ww8Ae3o3toSNA/chats" for 172.28.0.1 at 2019-07-23 14:34:15 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"4ww8Ae3o3toSNA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '4ww8Ae3o3toSNA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 15ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/applications/4ww8Ae3o3toSNA/chats" for 172.28.0.1 at 2019-07-23 14:34:16 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"4ww8Ae3o3toSNA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '4ww8Ae3o3toSNA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 16ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/applications/4ww8Ae3o3toSNA/chats" for 172.28.0.1 at 2019-07-23 14:34:17 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"4ww8Ae3o3toSNA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '4ww8Ae3o3toSNA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 14ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (1.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '4ww8Ae3o3toSNA' LIMIT 1[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[36mApplicationChat Create (0.4ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`, `lock_version`) VALUES (1, 1, '2019-07-23 14:34:17', '2019-07-23 14:34:17', 0)[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[36mClientApplication Update (0.5ms)[0m  [1m[33mUPDATE `client_applications` SET `chat_count` = 1, `updated_at` = '2019-07-23 14:34:17' WHERE `client_applications`.`id` = 1[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:67
+Started POST "/applications/4ww8Ae3o3toSNA/chats" for 172.28.0.1 at 2019-07-23 14:34:17 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"4ww8Ae3o3toSNA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.8ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '4ww8Ae3o3toSNA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 19ms (Views: 0.3ms | ActiveRecord: 0.8ms)
+
+
+  [1m[35m (1.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '4ww8Ae3o3toSNA' LIMIT 1[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[36mApplicationChat Create (1.1ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`, `lock_version`) VALUES (1, 2, '2019-07-23 14:34:17', '2019-07-23 14:34:17', 0)[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[36mClientApplication Update (0.5ms)[0m  [1m[33mUPDATE `client_applications` SET `chat_count` = 2 WHERE `client_applications`.`id` = 1[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:67
+Started POST "/applications/4ww8Ae3o3toSNA/chats" for 172.28.0.1 at 2019-07-23 14:34:17 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"4ww8Ae3o3toSNA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.9ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '4ww8Ae3o3toSNA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 17ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+  [1m[35m (1.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[36mClientApplication Load (0.7ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '4ww8Ae3o3toSNA' LIMIT 1[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[36mApplicationChat Create (0.8ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`, `lock_version`) VALUES (1, 3, '2019-07-23 14:34:18', '2019-07-23 14:34:18', 0)[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[36mClientApplication Update (0.5ms)[0m  [1m[33mUPDATE `client_applications` SET `chat_count` = 3, `updated_at` = '2019-07-23 14:34:18' WHERE `client_applications`.`id` = 1[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:67
+Started POST "/applications/4ww8Ae3o3toSNA/chats" for 172.28.0.1 at 2019-07-23 14:34:18 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"4ww8Ae3o3toSNA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.8ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '4ww8Ae3o3toSNA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 17ms (Views: 0.8ms | ActiveRecord: 0.8ms)
+
+
+  [1m[35m (1.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '4ww8Ae3o3toSNA' LIMIT 1[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[36mApplicationChat Create (1.1ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`, `lock_version`) VALUES (1, 4, '2019-07-23 14:34:18', '2019-07-23 14:34:18', 0)[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[36mClientApplication Update (0.4ms)[0m  [1m[33mUPDATE `client_applications` SET `chat_count` = 4 WHERE `client_applications`.`id` = 1[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:67
+Started POST "/applications/4ww8Ae3o3toSNA/chats" for 172.28.0.1 at 2019-07-23 14:34:18 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"4ww8Ae3o3toSNA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '4ww8Ae3o3toSNA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 19ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/applications/4ww8Ae3o3toSNA/chats" for 172.28.0.1 at 2019-07-23 14:34:19 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"4ww8Ae3o3toSNA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.7ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '4ww8Ae3o3toSNA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 18ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/applications/4ww8Ae3o3toSNA/chats" for 172.28.0.1 at 2019-07-23 14:34:22 +0000
+Processing by ApplicationChatsController#index as */*
+  Parameters: {"client_application_token"=>"4ww8Ae3o3toSNA"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '4ww8Ae3o3toSNA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+  [1m[36mApplicationChat Load (0.7ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 1[0m
+  ↳ app/controllers/application_chats_controller.rb:7
+Completed 200 OK in 7ms (Views: 3.0ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/applications/4ww8Ae3o3toSNA/chats" for 172.28.0.1 at 2019-07-23 14:34:26 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"4ww8Ae3o3toSNA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.7ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '4ww8Ae3o3toSNA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 20ms (Views: 0.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/applications/4ww8Ae3o3toSNA/chats" for 172.28.0.1 at 2019-07-23 14:34:29 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"4ww8Ae3o3toSNA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.7ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '4ww8Ae3o3toSNA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 19ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/applications/4ww8Ae3o3toSNA/chats" for 172.28.0.1 at 2019-07-23 14:34:35 +0000
+Processing by ApplicationChatsController#index as */*
+  Parameters: {"client_application_token"=>"4ww8Ae3o3toSNA"}
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '4ww8Ae3o3toSNA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+  [1m[36mApplicationChat Load (1.0ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 1[0m
+  ↳ app/controllers/application_chats_controller.rb:7
+Completed 200 OK in 9ms (Views: 4.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/applications/4ww8Ae3o3toSNA/chats" for 172.28.0.1 at 2019-07-23 14:34:36 +0000
+Processing by ApplicationChatsController#index as */*
+  Parameters: {"client_application_token"=>"4ww8Ae3o3toSNA"}
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '4ww8Ae3o3toSNA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+  [1m[36mApplicationChat Load (0.5ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 1[0m
+  ↳ app/controllers/application_chats_controller.rb:7
+Completed 200 OK in 6ms (Views: 2.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/applications/4ww8Ae3o3toSNA/chats" for 172.28.0.1 at 2019-07-23 14:34:36 +0000
+Processing by ApplicationChatsController#index as */*
+  Parameters: {"client_application_token"=>"4ww8Ae3o3toSNA"}
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '4ww8Ae3o3toSNA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+  [1m[36mApplicationChat Load (0.5ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 1[0m
+  ↳ app/controllers/application_chats_controller.rb:7
+Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/applications/4ww8Ae3o3toSNA/chats" for 172.28.0.1 at 2019-07-23 14:34:44 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"4ww8Ae3o3toSNA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.7ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '4ww8Ae3o3toSNA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 24ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+
+
+  [1m[35m (1.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '4ww8Ae3o3toSNA' LIMIT 1[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[36mApplicationChat Create (0.8ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`, `lock_version`) VALUES (1, 5, '2019-07-23 14:34:44', '2019-07-23 14:34:44', 0)[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[36mClientApplication Update (0.4ms)[0m  [1m[33mUPDATE `client_applications` SET `chat_count` = 5, `updated_at` = '2019-07-23 14:34:44' WHERE `client_applications`.`id` = 1[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:67
+Started POST "/applications" for 172.28.0.1 at 2019-07-23 14:34:49 +0000
+Processing by ClientApplicationsController#create as */*
+  Parameters: {"application"=>{"name"=>"test app"}, "client_application"=>{}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/client_applications_controller.rb:6
+  [1m[36mClientApplication Create (1.2ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test app', 'YrwMCQSV_eDejA', '2019-07-23 14:34:49', '2019-07-23 14:34:49')[0m
+  ↳ app/controllers/client_applications_controller.rb:6
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/client_applications_controller.rb:6
+Completed 201 Created in 13ms (Views: 0.3ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/applications/YrwMCQSV_eDejA/chats" for 172.28.0.1 at 2019-07-23 14:34:54 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"YrwMCQSV_eDejA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 22ms (Views: 0.5ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (1.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[36mApplicationChat Create (0.7ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`, `lock_version`) VALUES (2, 1, '2019-07-23 14:34:54', '2019-07-23 14:34:54', 0)[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[36mClientApplication Update (0.6ms)[0m  [1m[33mUPDATE `client_applications` SET `chat_count` = 1, `updated_at` = '2019-07-23 14:34:54' WHERE `client_applications`.`id` = 2[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:67
+Started POST "/applications/YrwMCQSV_eDejA/chats" for 172.28.0.1 at 2019-07-23 14:34:55 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"YrwMCQSV_eDejA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+  [1m[35m (1.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Completed 201 Created in 22ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+  ↳ app/workers/queue_worker.rb:15
+  [1m[36mClientApplication Load (0.7ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[36mApplicationChat Create (0.5ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`, `lock_version`) VALUES (2, 2, '2019-07-23 14:34:55', '2019-07-23 14:34:55', 0)[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[36mClientApplication Update (0.4ms)[0m  [1m[33mUPDATE `client_applications` SET `chat_count` = 2, `updated_at` = '2019-07-23 14:34:55' WHERE `client_applications`.`id` = 2[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:67
+Started POST "/applications/YrwMCQSV_eDejA/chats" for 172.28.0.1 at 2019-07-23 14:34:56 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"YrwMCQSV_eDejA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.8ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 18ms (Views: 1.5ms | ActiveRecord: 0.8ms)
+
+
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[36mApplicationChat Create (0.7ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`, `lock_version`) VALUES (2, 3, '2019-07-23 14:34:56', '2019-07-23 14:34:56', 0)[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[36mClientApplication Update (0.4ms)[0m  [1m[33mUPDATE `client_applications` SET `chat_count` = 3, `updated_at` = '2019-07-23 14:34:56' WHERE `client_applications`.`id` = 2[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:67
+Started POST "/applications/YrwMCQSV_eDejA/chats" for 172.28.0.1 at 2019-07-23 14:34:56 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"YrwMCQSV_eDejA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.7ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 18ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/applications/YrwMCQSV_eDejA/chats" for 172.28.0.1 at 2019-07-23 14:34:57 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"YrwMCQSV_eDejA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 19ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/applications/YrwMCQSV_eDejA/chats" for 172.28.0.1 at 2019-07-23 14:34:58 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"YrwMCQSV_eDejA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 32ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/applications/YrwMCQSV_eDejA/chats" for 172.28.0.1 at 2019-07-23 14:34:58 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"YrwMCQSV_eDejA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.8ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 17ms (Views: 0.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/applications/YrwMCQSV_eDejA/chats" for 172.28.0.1 at 2019-07-23 14:34:59 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"YrwMCQSV_eDejA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (1.7ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 26ms (Views: 0.3ms | ActiveRecord: 1.7ms)
+
+
+  [1m[35m (1.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[36mApplicationChat Create (0.6ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`, `lock_version`) VALUES (2, 4, '2019-07-23 14:34:59', '2019-07-23 14:34:59', 0)[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[36mClientApplication Update (0.4ms)[0m  [1m[33mUPDATE `client_applications` SET `chat_count` = 4, `updated_at` = '2019-07-23 14:34:59' WHERE `client_applications`.`id` = 2[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:67
+Started POST "/applications/YrwMCQSV_eDejA/chats" for 172.28.0.1 at 2019-07-23 14:35:00 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"YrwMCQSV_eDejA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.8ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 25ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+  [1m[35m (1.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[36mApplicationChat Create (0.5ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`, `lock_version`) VALUES (2, 5, '2019-07-23 14:35:00', '2019-07-23 14:35:00', 0)[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[36mClientApplication Update (0.5ms)[0m  [1m[33mUPDATE `client_applications` SET `chat_count` = 5, `updated_at` = '2019-07-23 14:35:00' WHERE `client_applications`.`id` = 2[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:67
+Started POST "/applications/YrwMCQSV_eDejA/chats" for 172.28.0.1 at 2019-07-23 14:35:00 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"YrwMCQSV_eDejA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 26ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (2.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[36mClientApplication Load (0.8ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[36mApplicationChat Create (0.5ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`, `lock_version`) VALUES (2, 6, '2019-07-23 14:35:00', '2019-07-23 14:35:00', 0)[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[36mClientApplication Update (0.7ms)[0m  [1m[33mUPDATE `client_applications` SET `chat_count` = 6 WHERE `client_applications`.`id` = 2[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:67
+Started POST "/applications/YrwMCQSV_eDejA/chats" for 172.28.0.1 at 2019-07-23 14:35:00 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"YrwMCQSV_eDejA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 20ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (1.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[36mClientApplication Load (1.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[36mApplicationChat Create (0.5ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`, `lock_version`) VALUES (2, 7, '2019-07-23 14:35:00', '2019-07-23 14:35:00', 0)[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[36mClientApplication Update (0.6ms)[0m  [1m[33mUPDATE `client_applications` SET `chat_count` = 7 WHERE `client_applications`.`id` = 2[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:67
+Started POST "/applications/YrwMCQSV_eDejA/chats" for 172.28.0.1 at 2019-07-23 14:35:01 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"YrwMCQSV_eDejA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.8ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 22ms (Views: 0.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/applications/YrwMCQSV_eDejA/chats" for 172.28.0.1 at 2019-07-23 14:35:01 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"YrwMCQSV_eDejA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 18ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/applications/YrwMCQSV_eDejA/chats" for 172.28.0.1 at 2019-07-23 14:35:02 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"YrwMCQSV_eDejA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.8ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 22ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/applications/YrwMCQSV_eDejA/chats" for 172.28.0.1 at 2019-07-23 14:35:02 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"YrwMCQSV_eDejA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (1.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 23ms (Views: 0.6ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/applications/YrwMCQSV_eDejA/chats" for 172.28.0.1 at 2019-07-23 14:35:03 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"YrwMCQSV_eDejA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.7ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 20ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+  [1m[35m (1.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[36mApplicationChat Create (0.5ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`, `lock_version`) VALUES (2, 8, '2019-07-23 14:35:03', '2019-07-23 14:35:03', 0)[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[36mClientApplication Update (0.4ms)[0m  [1m[33mUPDATE `client_applications` SET `chat_count` = 8, `updated_at` = '2019-07-23 14:35:03' WHERE `client_applications`.`id` = 2[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:67
+Started POST "/applications/YrwMCQSV_eDejA/chats" for 172.28.0.1 at 2019-07-23 14:35:04 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"YrwMCQSV_eDejA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (1.1ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 28ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
+  [1m[35m (3.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[36mApplicationChat Create (0.5ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`, `lock_version`) VALUES (2, 9, '2019-07-23 14:35:04', '2019-07-23 14:35:04', 0)[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[36mClientApplication Update (0.7ms)[0m  [1m[33mUPDATE `client_applications` SET `chat_count` = 9, `updated_at` = '2019-07-23 14:35:04' WHERE `client_applications`.`id` = 2[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:67
+Started GET "/applications/4ww8Ae3o3toSNA/chats" for 172.28.0.1 at 2019-07-23 14:35:06 +0000
+Processing by ApplicationChatsController#index as */*
+  Parameters: {"client_application_token"=>"4ww8Ae3o3toSNA"}
+  [1m[36mClientApplication Load (0.7ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = '4ww8Ae3o3toSNA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+  [1m[36mApplicationChat Load (0.6ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 1[0m
+  ↳ app/controllers/application_chats_controller.rb:7
+Completed 200 OK in 7ms (Views: 2.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/applications/YrwMCQSV_eDejA/chats" for 172.28.0.1 at 2019-07-23 14:35:11 +0000
+Processing by ApplicationChatsController#index as */*
+  Parameters: {"client_application_token"=>"YrwMCQSV_eDejA"}
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+  [1m[36mApplicationChat Load (0.7ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 2[0m
+  ↳ app/controllers/application_chats_controller.rb:7
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/applications/YrwMCQSV_eDejA/chats" for 172.28.0.1 at 2019-07-23 14:35:18 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"YrwMCQSV_eDejA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.9ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 22ms (Views: 0.4ms | ActiveRecord: 0.9ms)
+
+
+  [1m[35m (2.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[36mClientApplication Load (0.9ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[36mApplicationChat Create (0.6ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`, `lock_version`) VALUES (2, 10, '2019-07-23 14:35:18', '2019-07-23 14:35:18', 0)[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[36mClientApplication Update (0.5ms)[0m  [1m[33mUPDATE `client_applications` SET `chat_count` = 10, `updated_at` = '2019-07-23 14:35:18' WHERE `client_applications`.`id` = 2[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:67
+Started POST "/applications/YrwMCQSV_eDejA/chats" for 172.28.0.1 at 2019-07-23 14:35:19 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"YrwMCQSV_eDejA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.7ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 17ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+  [1m[35m (1.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[36mApplicationChat Create (0.5ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`, `lock_version`) VALUES (2, 11, '2019-07-23 14:35:19', '2019-07-23 14:35:19', 0)[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[36mClientApplication Update (0.5ms)[0m  [1m[33mUPDATE `client_applications` SET `chat_count` = 11, `updated_at` = '2019-07-23 14:35:19' WHERE `client_applications`.`id` = 2[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:67
+Started POST "/applications/YrwMCQSV_eDejA/chats" for 172.28.0.1 at 2019-07-23 14:35:21 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"YrwMCQSV_eDejA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.9ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 19ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/applications/YrwMCQSV_eDejA/chats" for 172.28.0.1 at 2019-07-23 14:35:22 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"YrwMCQSV_eDejA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.8ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 18ms (Views: 0.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/applications/YrwMCQSV_eDejA/chats" for 172.28.0.1 at 2019-07-23 14:35:26 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"YrwMCQSV_eDejA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 17ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/applications/YrwMCQSV_eDejA/chats" for 172.28.0.1 at 2019-07-23 14:35:46 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"YrwMCQSV_eDejA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 20ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/applications/YrwMCQSV_eDejA/chats" for 172.28.0.1 at 2019-07-23 14:35:47 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"YrwMCQSV_eDejA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.8ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 15ms (Views: 0.3ms | ActiveRecord: 0.8ms)
+
+
+  [1m[35m (1.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[36mApplicationChat Create (0.8ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`, `lock_version`) VALUES (2, 12, '2019-07-23 14:35:47', '2019-07-23 14:35:47', 0)[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[36mClientApplication Update (0.5ms)[0m  [1m[33mUPDATE `client_applications` SET `chat_count` = 12, `updated_at` = '2019-07-23 14:35:47' WHERE `client_applications`.`id` = 2[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:67
+Started POST "/applications/YrwMCQSV_eDejA/chats" for 172.28.0.1 at 2019-07-23 14:35:54 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"YrwMCQSV_eDejA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (1.3ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 20ms (Views: 0.3ms | ActiveRecord: 1.3ms)
+
+
+  [1m[35m (2.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[36mApplicationChat Create (0.5ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`, `lock_version`) VALUES (2, 13, '2019-07-23 14:35:54', '2019-07-23 14:35:54', 0)[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[36mClientApplication Update (0.4ms)[0m  [1m[33mUPDATE `client_applications` SET `chat_count` = 13, `updated_at` = '2019-07-23 14:35:54' WHERE `client_applications`.`id` = 2[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:67
+Started POST "/applications/YrwMCQSV_eDejA/chats" for 172.28.0.1 at 2019-07-23 14:35:55 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"YrwMCQSV_eDejA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 18ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (2.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[36mApplicationChat Create (0.4ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`, `lock_version`) VALUES (2, 14, '2019-07-23 14:35:55', '2019-07-23 14:35:55', 0)[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[36mClientApplication Update (0.4ms)[0m  [1m[33mUPDATE `client_applications` SET `chat_count` = 14, `updated_at` = '2019-07-23 14:35:55' WHERE `client_applications`.`id` = 2[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:67
+Started POST "/applications/YrwMCQSV_eDejA/chats" for 172.28.0.1 at 2019-07-23 14:35:56 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"YrwMCQSV_eDejA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (1.3ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 20ms (Views: 0.5ms | ActiveRecord: 1.3ms)
+
+
+  [1m[35m (2.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[36mApplicationChat Create (0.4ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`, `lock_version`) VALUES (2, 15, '2019-07-23 14:35:56', '2019-07-23 14:35:56', 0)[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[36mClientApplication Update (0.4ms)[0m  [1m[33mUPDATE `client_applications` SET `chat_count` = 15, `updated_at` = '2019-07-23 14:35:56' WHERE `client_applications`.`id` = 2[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:67
+Started POST "/applications/YrwMCQSV_eDejA/chats" for 172.28.0.1 at 2019-07-23 14:35:57 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"YrwMCQSV_eDejA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 18ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/applications/YrwMCQSV_eDejA/chats" for 172.28.0.1 at 2019-07-23 14:35:58 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"YrwMCQSV_eDejA", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.7ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 20ms (Views: 0.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/applications/YrwMCQSV_eDejA/chats" for 172.28.0.1 at 2019-07-23 14:36:06 +0000
+Processing by ApplicationChatsController#index as */*
+  Parameters: {"client_application_token"=>"YrwMCQSV_eDejA"}
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+  [1m[36mApplicationChat Load (0.8ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 2[0m
+  ↳ app/controllers/application_chats_controller.rb:7
+Completed 200 OK in 11ms (Views: 6.0ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/applications" for 172.28.0.1 at 2019-07-23 14:36:11 +0000
+Processing by ClientApplicationsController#create as */*
+  Parameters: {"application"=>{"name"=>"test app"}, "client_application"=>{}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/client_applications_controller.rb:6
+  [1m[36mClientApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test app', 'MPeuY14zKeK77A', '2019-07-23 14:36:11', '2019-07-23 14:36:11')[0m
+  ↳ app/controllers/client_applications_controller.rb:6
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/client_applications_controller.rb:6
+Completed 201 Created in 11ms (Views: 0.3ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/applications/MPeuY14zKeK77A/chats" for 172.28.0.1 at 2019-07-23 14:36:17 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"MPeuY14zKeK77A", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.7ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'MPeuY14zKeK77A' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 18ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/applications/MPeuY14zKeK77A/chats" for 172.28.0.1 at 2019-07-23 14:36:17 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"MPeuY14zKeK77A", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'MPeuY14zKeK77A' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 33ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/applications/MPeuY14zKeK77A/chats" for 172.28.0.1 at 2019-07-23 14:36:18 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"MPeuY14zKeK77A", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'MPeuY14zKeK77A' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 24ms (Views: 4.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/applications/MPeuY14zKeK77A/chats" for 172.28.0.1 at 2019-07-23 14:36:18 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"MPeuY14zKeK77A", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'MPeuY14zKeK77A' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 18ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/applications/MPeuY14zKeK77A/chats" for 172.28.0.1 at 2019-07-23 14:36:18 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"MPeuY14zKeK77A", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.7ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'MPeuY14zKeK77A' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 16ms (Views: 0.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/applications/MPeuY14zKeK77A/chats" for 172.28.0.1 at 2019-07-23 14:36:19 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"MPeuY14zKeK77A", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.7ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'MPeuY14zKeK77A' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 13ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/applications/MPeuY14zKeK77A/chats" for 172.28.0.1 at 2019-07-23 14:36:19 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"MPeuY14zKeK77A", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.7ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'MPeuY14zKeK77A' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 18ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/applications/MPeuY14zKeK77A/chats" for 172.28.0.1 at 2019-07-23 14:36:20 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"MPeuY14zKeK77A", "application_chat"=>{}}
+  [1m[36mClientApplication Load (1.8ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'MPeuY14zKeK77A' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 20ms (Views: 0.4ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/applications/MPeuY14zKeK77A/chats" for 172.28.0.1 at 2019-07-23 14:36:20 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"MPeuY14zKeK77A", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'MPeuY14zKeK77A' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 20ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/applications/YrwMCQSV_eDejA/chats" for 172.28.0.1 at 2019-07-23 14:36:22 +0000
+Processing by ApplicationChatsController#index as */*
+  Parameters: {"client_application_token"=>"YrwMCQSV_eDejA"}
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'YrwMCQSV_eDejA' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+  [1m[36mApplicationChat Load (0.5ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 2[0m
+  ↳ app/controllers/application_chats_controller.rb:7
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/applications/MPeuY14zKeK77A/chats" for 172.28.0.1 at 2019-07-23 14:36:26 +0000
+Processing by ApplicationChatsController#index as */*
+  Parameters: {"client_application_token"=>"MPeuY14zKeK77A"}
+  [1m[36mClientApplication Load (1.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'MPeuY14zKeK77A' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+  [1m[36mApplicationChat Load (2.4ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 3[0m
+  ↳ app/controllers/application_chats_controller.rb:7
+Completed 200 OK in 20ms (Views: 2.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/applications/MPeuY14zKeK77A/chats" for 172.28.0.1 at 2019-07-23 14:36:32 +0000
+Processing by ApplicationChatsController#index as */*
+  Parameters: {"client_application_token"=>"MPeuY14zKeK77A"}
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'MPeuY14zKeK77A' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+  [1m[36mApplicationChat Load (0.5ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 3[0m
+  ↳ app/controllers/application_chats_controller.rb:7
+Completed 200 OK in 6ms (Views: 2.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/applications/MPeuY14zKeK77A/chats" for 172.28.0.1 at 2019-07-23 14:36:32 +0000
+Processing by ApplicationChatsController#index as */*
+  Parameters: {"client_application_token"=>"MPeuY14zKeK77A"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'MPeuY14zKeK77A' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+  [1m[36mApplicationChat Load (0.4ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 3[0m
+  ↳ app/controllers/application_chats_controller.rb:7
+Completed 200 OK in 9ms (Views: 2.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/applications/MPeuY14zKeK77A/chats" for 172.28.0.1 at 2019-07-23 14:36:33 +0000
+Processing by ApplicationChatsController#index as */*
+  Parameters: {"client_application_token"=>"MPeuY14zKeK77A"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'MPeuY14zKeK77A' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+  [1m[36mApplicationChat Load (0.5ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 3[0m
+  ↳ app/controllers/application_chats_controller.rb:7
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/applications/MPeuY14zKeK77A/chats" for 172.28.0.1 at 2019-07-23 14:36:34 +0000
+Processing by ApplicationChatsController#index as */*
+  Parameters: {"client_application_token"=>"MPeuY14zKeK77A"}
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'MPeuY14zKeK77A' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+  [1m[36mApplicationChat Load (0.7ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 3[0m
+  ↳ app/controllers/application_chats_controller.rb:7
+Completed 200 OK in 8ms (Views: 2.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/applications/MPeuY14zKeK77A/chats" for 172.28.0.1 at 2019-07-23 14:36:34 +0000
+Processing by ApplicationChatsController#index as */*
+  Parameters: {"client_application_token"=>"MPeuY14zKeK77A"}
+  [1m[36mClientApplication Load (1.0ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'MPeuY14zKeK77A' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+  [1m[36mApplicationChat Load (0.6ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 3[0m
+  ↳ app/controllers/application_chats_controller.rb:7
+Completed 200 OK in 8ms (Views: 2.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/applications/MPeuY14zKeK77A/chats" for 172.28.0.1 at 2019-07-23 14:36:35 +0000
+Processing by ApplicationChatsController#index as */*
+  Parameters: {"client_application_token"=>"MPeuY14zKeK77A"}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'MPeuY14zKeK77A' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+  [1m[36mApplicationChat Load (0.5ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 3[0m
+  ↳ app/controllers/application_chats_controller.rb:7
+Completed 200 OK in 6ms (Views: 2.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/applications/MPeuY14zKeK77A/chats" for 172.28.0.1 at 2019-07-23 14:36:35 +0000
+Processing by ApplicationChatsController#index as */*
+  Parameters: {"client_application_token"=>"MPeuY14zKeK77A"}
+  [1m[36mClientApplication Load (0.7ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'MPeuY14zKeK77A' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+  [1m[36mApplicationChat Load (0.6ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 3[0m
+  ↳ app/controllers/application_chats_controller.rb:7
+Completed 200 OK in 6ms (Views: 2.4ms | ActiveRecord: 1.2ms)
+
+
+  [1m[35m (10.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rake:4
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE DATABASE `rails-chat-app_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rake:4
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rake:4
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE DATABASE `rails-chat-app_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rake:4
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rake:4
+  [1m[35m (1.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ db/schema.rb:15
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS `application_chats` CASCADE[0m
+  ↳ db/schema.rb:15
+  [1m[35m (28.3ms)[0m  [1m[35mCREATE TABLE `application_chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `client_application_id` bigint, `identifier_number` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `modifiable_attribute` varchar(255), `lock_version` int, `message_count` int DEFAULT 0,  INDEX `index_application_chats_on_client_application_id`  (`client_application_id`),  INDEX `index_application_chats_on_identifier_number`  (`identifier_number`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS `chat_messages` CASCADE[0m
+  ↳ db/schema.rb:27
+  [1m[35m (11.5ms)[0m  [1m[35mCREATE TABLE `chat_messages` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `application_chat_id` bigint, `identifier_number` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `text` varchar(255), `lock_version` int,  INDEX `index_chat_messages_on_application_chat_id`  (`application_chat_id`),  INDEX `index_chat_messages_on_identifier_number`  (`identifier_number`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  ↳ db/schema.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS `client_applications` CASCADE[0m
+  ↳ db/schema.rb:38
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE `client_applications` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `identifier_token` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `chat_count` int DEFAULT 0) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  ↳ db/schema.rb:38
+  [1m[35m (10.0ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES (20190723142332)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES
+(20190723073709),
+(20190721100447),
+(20190720110252),
+(20190723142321),
+(20190721100238),
+(20190719080908),
+(20190723073507),
+(20190720085323),
+(20190717213102),
+(20190720172404);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2019-07-23 14:39:42', '2019-07-23 14:39:42')[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rake:4
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rake:4
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS `application_chats` CASCADE[0m
+  ↳ db/schema.rb:15
+  [1m[35m (9.6ms)[0m  [1m[35mCREATE TABLE `application_chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `client_application_id` bigint, `identifier_number` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `modifiable_attribute` varchar(255), `lock_version` int, `message_count` int DEFAULT 0,  INDEX `index_application_chats_on_client_application_id`  (`client_application_id`),  INDEX `index_application_chats_on_identifier_number`  (`identifier_number`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS `chat_messages` CASCADE[0m
+  ↳ db/schema.rb:27
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE `chat_messages` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `application_chat_id` bigint, `identifier_number` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `text` varchar(255), `lock_version` int,  INDEX `index_chat_messages_on_application_chat_id`  (`application_chat_id`),  INDEX `index_chat_messages_on_identifier_number`  (`identifier_number`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  ↳ db/schema.rb:27
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS `client_applications` CASCADE[0m
+  ↳ db/schema.rb:38
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE `client_applications` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `identifier_token` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `chat_count` int DEFAULT 0) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  ↳ db/schema.rb:38
+  [1m[35m (10.4ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES (20190723142332)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES
+(20190723073709),
+(20190721100447),
+(20190720110252),
+(20190723142321),
+(20190721100238),
+(20190719080908),
+(20190723073507),
+(20190720085323),
+(20190717213102),
+(20190720172404);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2019-07-23 14:39:42', '2019-07-23 14:39:42')[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rake:4
+  [1m[36mActiveRecord::InternalMetadata Update (0.8ms)[0m  [1m[33mUPDATE `ar_internal_metadata` SET `value` = 'test' WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rake:4
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rake:4
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rake:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rake:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT GET_LOCK('1995621262938037875', 0)[0m
+  ↳ bin/rake:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rake:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rake:4
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rake:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rake:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT RELEASE_LOCK('1995621262938037875')[0m
+  ↳ bin/rake:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (3.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/models/chat_message.rb:29
+  [1m[36mChatMessage Load (1.4ms)[0m  [1m[34mSELECT  `chat_messages`.* FROM `chat_messages` ORDER BY `chat_messages`.`id` ASC LIMIT 1000[0m
+  ↳ app/models/chat_message.rb:29
+Started POST "/applications/MPeuY14zKeK77A/chats" for 172.29.0.1 at 2019-07-23 14:41:43 +0000
+  [1m[35m (4.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"MPeuY14zKeK77A", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'MPeuY14zKeK77A' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 400 Bad Request in 15ms (Views: 0.2ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/applications" for 172.29.0.1 at 2019-07-23 14:41:49 +0000
+Processing by ClientApplicationsController#create as */*
+  Parameters: {"application"=>{"name"=>"test app"}, "client_application"=>{}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/client_applications_controller.rb:6
+  [1m[36mClientApplication Create (2.1ms)[0m  [1m[32mINSERT INTO `client_applications` (`name`, `identifier_token`, `created_at`, `updated_at`) VALUES ('test app', 'igQSL898zP2M0w', '2019-07-23 14:41:49', '2019-07-23 14:41:49')[0m
+  ↳ app/controllers/client_applications_controller.rb:6
+  [1m[35m (73.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/client_applications_controller.rb:6
+Completed 201 Created in 88ms (Views: 0.3ms | ActiveRecord: 77.2ms)
+
+
+Started POST "/applications/igQSL898zP2M0w/chats" for 172.29.0.1 at 2019-07-23 14:41:55 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"igQSL898zP2M0w", "application_chat"=>{}}
+  [1m[36mClientApplication Load (1.2ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'igQSL898zP2M0w' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 73ms (Views: 0.2ms | ActiveRecord: 1.7ms)
+
+
+  [1m[35m (5.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'igQSL898zP2M0w' LIMIT 1[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[36mApplicationChat Create (0.5ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`, `lock_version`) VALUES (1, 1, '2019-07-23 14:41:56', '2019-07-23 14:41:56', 0)[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[36mClientApplication Update (1.0ms)[0m  [1m[33mUPDATE `client_applications` SET `chat_count` = 1, `updated_at` = '2019-07-23 14:41:56' WHERE `client_applications`.`id` = 1[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:67
+Started POST "/applications/igQSL898zP2M0w/chats" for 172.29.0.1 at 2019-07-23 14:41:57 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"igQSL898zP2M0w", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'igQSL898zP2M0w' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 20ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'igQSL898zP2M0w' LIMIT 1[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[36mApplicationChat Create (0.5ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`, `lock_version`) VALUES (1, 2, '2019-07-23 14:41:57', '2019-07-23 14:41:57', 0)[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[36mClientApplication Update (0.6ms)[0m  [1m[33mUPDATE `client_applications` SET `chat_count` = 2, `updated_at` = '2019-07-23 14:41:57' WHERE `client_applications`.`id` = 1[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:67
+Started POST "/applications/igQSL898zP2M0w/chats" for 172.29.0.1 at 2019-07-23 14:41:59 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"igQSL898zP2M0w", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.7ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'igQSL898zP2M0w' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 18ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[36mClientApplication Load (0.8ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'igQSL898zP2M0w' LIMIT 1[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[36mApplicationChat Create (0.5ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`, `lock_version`) VALUES (1, 3, '2019-07-23 14:41:59', '2019-07-23 14:41:59', 0)[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[36mClientApplication Update (0.5ms)[0m  [1m[33mUPDATE `client_applications` SET `chat_count` = 3, `updated_at` = '2019-07-23 14:41:59' WHERE `client_applications`.`id` = 1[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:67
+Started POST "/applications/igQSL898zP2M0w/chats" for 172.29.0.1 at 2019-07-23 14:42:01 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"igQSL898zP2M0w", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'igQSL898zP2M0w' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+Completed 201 Created in 14ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[36mClientApplication Load (0.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'igQSL898zP2M0w' LIMIT 1[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[36mApplicationChat Create (0.8ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`, `lock_version`) VALUES (1, 4, '2019-07-23 14:42:01', '2019-07-23 14:42:01', 0)[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (8.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[36mClientApplication Update (0.8ms)[0m  [1m[33mUPDATE `client_applications` SET `chat_count` = 4, `updated_at` = '2019-07-23 14:42:01' WHERE `client_applications`.`id` = 1[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[35m (13.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:67
+Started POST "/applications/igQSL898zP2M0w/chats" for 172.29.0.1 at 2019-07-23 14:42:01 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"igQSL898zP2M0w", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'igQSL898zP2M0w' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'igQSL898zP2M0w' LIMIT 1[0m
+  ↳ app/workers/queue_worker.rb:15
+Completed 201 Created in 18ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[36mApplicationChat Create (0.5ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`, `lock_version`) VALUES (1, 5, '2019-07-23 14:42:01', '2019-07-23 14:42:01', 0)[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[36mClientApplication Update (0.5ms)[0m  [1m[33mUPDATE `client_applications` SET `chat_count` = 5 WHERE `client_applications`.`id` = 1[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:67
+Started POST "/applications/igQSL898zP2M0w/chats" for 172.29.0.1 at 2019-07-23 14:42:03 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"igQSL898zP2M0w", "application_chat"=>{}}
+  [1m[36mClientApplication Load (1.4ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'igQSL898zP2M0w' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'igQSL898zP2M0w' LIMIT 1[0m
+Completed 201 Created in 17ms (Views: 0.2ms | ActiveRecord: 1.4ms)
+
+
+  ↳ app/workers/queue_worker.rb:15
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[36mApplicationChat Create (0.9ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`, `lock_version`) VALUES (1, 6, '2019-07-23 14:42:03', '2019-07-23 14:42:03', 0)[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[36mClientApplication Update (0.5ms)[0m  [1m[33mUPDATE `client_applications` SET `chat_count` = 6, `updated_at` = '2019-07-23 14:42:03' WHERE `client_applications`.`id` = 1[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:67
+Started POST "/applications/igQSL898zP2M0w/chats" for 172.29.0.1 at 2019-07-23 14:42:04 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"igQSL898zP2M0w", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'igQSL898zP2M0w' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'igQSL898zP2M0w' LIMIT 1[0m
+  ↳ app/workers/queue_worker.rb:15
+Completed 201 Created in 20ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[36mApplicationChat Create (0.5ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`, `lock_version`) VALUES (1, 7, '2019-07-23 14:42:04', '2019-07-23 14:42:04', 0)[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[36mClientApplication Update (0.4ms)[0m  [1m[33mUPDATE `client_applications` SET `chat_count` = 7, `updated_at` = '2019-07-23 14:42:04' WHERE `client_applications`.`id` = 1[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:67
+Started POST "/applications/igQSL898zP2M0w/chats" for 172.29.0.1 at 2019-07-23 14:42:05 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"igQSL898zP2M0w", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.6ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'igQSL898zP2M0w' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+  [1m[36mClientApplication Load (0.5ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'igQSL898zP2M0w' LIMIT 1[0m
+  ↳ app/workers/queue_worker.rb:15
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+Completed 201 Created in 21ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+  ↳ app/workers/queue_worker.rb:50
+  [1m[36mApplicationChat Create (0.6ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`, `lock_version`) VALUES (1, 8, '2019-07-23 14:42:05', '2019-07-23 14:42:05', 0)[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[36mClientApplication Update (0.5ms)[0m  [1m[33mUPDATE `client_applications` SET `chat_count` = 8, `updated_at` = '2019-07-23 14:42:05' WHERE `client_applications`.`id` = 1[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:67
+Started POST "/applications/igQSL898zP2M0w/chats" for 172.29.0.1 at 2019-07-23 14:42:05 +0000
+Processing by ApplicationChatsController#create as */*
+  Parameters: {"client_application_token"=>"igQSL898zP2M0w", "application_chat"=>{}}
+  [1m[36mClientApplication Load (0.7ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'igQSL898zP2M0w' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+  [1m[36mClientApplication Load (1.1ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'igQSL898zP2M0w' LIMIT 1[0m
+  ↳ app/workers/queue_worker.rb:15
+Completed 201 Created in 17ms (Views: 1.4ms | ActiveRecord: 0.7ms)
+
+
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[36mApplicationChat Create (0.4ms)[0m  [1m[32mINSERT INTO `application_chats` (`client_application_id`, `identifier_number`, `created_at`, `updated_at`, `lock_version`) VALUES (1, 9, '2019-07-23 14:42:05', '2019-07-23 14:42:05', 0)[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[36mClientApplication Update (0.5ms)[0m  [1m[33mUPDATE `client_applications` SET `chat_count` = 9 WHERE `client_applications`.`id` = 1[0m
+  ↳ app/workers/queue_worker.rb:67
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/queue_worker.rb:67
+Started GET "/applications/igQSL898zP2M0w/chats" for 172.29.0.1 at 2019-07-23 14:42:15 +0000
+Processing by ApplicationChatsController#index as */*
+  Parameters: {"client_application_token"=>"igQSL898zP2M0w"}
+  [1m[36mClientApplication Load (1.1ms)[0m  [1m[34mSELECT  `client_applications`.* FROM `client_applications` WHERE `client_applications`.`identifier_token` = 'igQSL898zP2M0w' LIMIT 1[0m
+  ↳ app/controllers/application_chats_controller.rb:50
+  [1m[36mApplicationChat Load (0.6ms)[0m  [1m[34mSELECT `application_chats`.* FROM `application_chats` WHERE `application_chats`.`client_application_id` = 1[0m
+  ↳ app/controllers/application_chats_controller.rb:7
+Completed 200 OK in 12ms (Views: 3.2ms | ActiveRecord: 1.7ms)
+
+

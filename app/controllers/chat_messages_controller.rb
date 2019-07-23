@@ -43,7 +43,7 @@ class ChatMessagesController < ApplicationController
   private
 
   def message_body(parent_chat_messages)
-    parent_chat_messages.new(identifier_number: parent_chat_messages.count + 1, text: message_params[:text])
+    parent_chat_messages.new(identifier_number: @parent_chat.message_count + 1, text: message_params[:text])
   end
 
 

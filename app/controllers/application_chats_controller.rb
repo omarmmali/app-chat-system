@@ -42,7 +42,7 @@ class ApplicationChatsController < ApplicationController
   end
 
   def chat_body(parent_chats)
-    parent_chats.new(identifier_number: parent_chats.count + 1)
+    parent_chats.new(identifier_number: @parent_application.chat_count + 1)
   end
 
 
