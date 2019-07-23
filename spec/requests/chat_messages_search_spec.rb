@@ -1,6 +1,9 @@
 RSpec.describe "ChatMessages Search", type: :request do
   before(:each) do
-    @client_application = ClientApplication.create(name: "test_client_application")
+    @client_application = ClientApplication.create(
+        identifier_token: ClientApplication.create_identifier_token,
+        name: "test_client_application"
+    )
     @application_chat = @client_application.chats.create(identifier_number: 1)
   end
 

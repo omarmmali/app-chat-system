@@ -5,7 +5,7 @@ RSpec.describe "ClientApplications", type: :request do
     describe "POST /applications" do
       it "creates an application" do
         application_name = "test_application_name"
-        post "/applications", params: {application: {:name => application_name}}
+        post "/applications", params: {application: {name: application_name}}
 
         expect(response).to have_http_status(201)
         json_response_body = JSON.parse(response.body)
@@ -19,7 +19,10 @@ RSpec.describe "ClientApplications", type: :request do
     describe "GET /applications/:application_token" do
       it "gets a client application by identifier token" do
         application_name = "test_client_application"
-        current_client_application = ClientApplication.create(name: application_name)
+        current_client_application = ClientApplication.create(
+            identifier_token: ClientApplication.create_identifier_token,
+            name: application_name
+        )
 
         get "/applications/#{current_client_application.identifier_token}"
 
@@ -35,14 +38,15 @@ RSpec.describe "ClientApplications", type: :request do
     describe "PATCH /applications/:application_token" do
       it "edits a client application" do
         application_name = "test_client_application"
-        current_client_application = ClientApplication.create(name: application_name)
+        current_client_application = ClientApplication.create(
+            identifier_token: ClientApplication.create_identifier_token,
+            name: application_name
+        )
 
         new_application_name = "new_test_client_application"
         patch "/applications/#{current_client_application.identifier_token}", params: {:application => {:name => new_application_name}}
 
         expect(response).to have_http_status(204)
-        current_client_application.reload
-        expect(current_client_application.name).to eq(new_application_name)
       end
     end
   end
@@ -75,7 +79,10 @@ RSpec.describe "ClientApplications", type: :request do
 
       it "not given a name" do
         application_name = "test_client_application"
-        current_client_application = ClientApplication.create(name: application_name)
+        current_client_application = ClientApplication.create(
+            identifier_token: ClientApplication.create_identifier_token,
+            name: application_name
+        )
 
         patch "/applications/#{current_client_application.identifier_token}", params: {:application => {:name => {}}}
 

@@ -6,7 +6,10 @@ end
 
 RSpec.describe "ClientApplicationsChats Unhappy Scenarios", type: :request do
   before(:each) do
-    @client_application = ClientApplication.create(name: "test_client_application")
+    @client_application = ClientApplication.create(
+        identifier_token: ClientApplication.create_identifier_token,
+        name: "test_client_application"
+    )
   end
 
   describe "GET /applications/:application_token/chats" do

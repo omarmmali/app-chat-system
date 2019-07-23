@@ -11,12 +11,30 @@ class QueueWorker
     if parsed_message_body.key? "message"
       parent_application = ClientApplication.find_by_identifier_token(parsed_message_body["message"]["application_token"])
       handle_message(parent_application, parsed_message_body)
-    else
+    elsif parsed_message_body.key? "chat"
       parent_application = ClientApplication.find_by_identifier_token(parsed_message_body["chat"]["application_token"])
       handle_chat(parent_application, parsed_message_body)
+    else
+      handle_application(parsed_message_body)
     end
-
     ack!
+  end
+
+
+  def handle_application(parsed_message_body)
+    if parsed_message_body["type"] == "edit"
+      edit_application(parsed_message_body["application"]["token"], parsed_message_body["application"]["name"])
+    else
+      create_application(parsed_message_body["application"]["token"], parsed_message_body["application"]["name"])
+    end
+  end
+
+  def edit_application(token, name)
+    ClientApplication.find_by_identifier_token(token).update(name: name)
+  end
+
+  def create_application(token, name)
+    ClientApplication.create(identifier_token: token, name: name)
   end
 
   def update_message(parent_chat, parsed_message_body)

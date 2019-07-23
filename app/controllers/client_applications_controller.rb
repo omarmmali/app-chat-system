@@ -2,9 +2,8 @@ class ClientApplicationsController < ApplicationController
   rescue_from ActionController::ParameterMissing, with: :handle_missing_parameter
 
   def create
-    client_application = ClientApplication.new(:name => client_application_params[:name])
-    client_application.save
-    render status: :created, json: {application: client_application}
+    WorkQueue.enqueue_job({type: "create", application: application_body})
+    render status: :created, json: {application: application_body}
   end
 
   def show
@@ -14,11 +13,18 @@ class ClientApplicationsController < ApplicationController
 
   def update
     verify_application_token or return
-    @client_application.update(name: client_application_params[:name])
+
+    @client_application.assign_attributes(name: client_application_params[:name])
+    WorkQueue.enqueue_job({type: "edit", application: @client_application})
+
     render status: :no_content
   end
 
   private
+
+  def application_body
+    ClientApplication.new(name: client_application_params[:name], identifier_token: ClientApplication.create_identifier_token)
+  end
 
   def verify_application_token
     @client_application = ClientApplication.find_by_identifier_token(params[:token])
