@@ -18,7 +18,8 @@ class ApplicationChatsController < ApplicationController
     verify_application_token or return
     verify_chat_number or return
 
-    @application_chat.update(chat_params)
+    @application_chat.assign_attributes(chat_params)
+    WorkQueue.enqueue_job({chat: @application_chat})
 
     render status: :no_content
   end
