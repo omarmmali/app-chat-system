@@ -28,6 +28,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'elasticsearch-model', '~> 6.0.0'
 
 gem 'bunny', '>= 2.14.1'
+gem 'sneakers', '~> 2.11.0'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 

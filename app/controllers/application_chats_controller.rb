@@ -61,7 +61,7 @@ class ApplicationChatsController < ApplicationController
   end
 
   def handle_error_for(invalid_parameter)
-    render status: :bad_request, json: "Invalid #{invalid_parameter}"
+    render status: :bad_request, json: {errors: "Invalid #{invalid_parameter}"}
   end
 
   def chat_params

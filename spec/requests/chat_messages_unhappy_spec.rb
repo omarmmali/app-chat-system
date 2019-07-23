@@ -23,16 +23,16 @@ RSpec.describe "ChatMessages Unhappy Scenarios", type: :request do
       get messages_url_for("non-existent_token", @application_chat.identifier_number)
 
       expect(response).to have_http_status(400)
-      expect(response.body).to_not be_nil
-      expect(response.body).to eq("Invalid application token")
+      json_response = JSON.parse(response.body)
+      expect(json_response["errors"]).to eq("Invalid application token")
     end
 
     it "returns bad request when given a non existent chat number" do
       get messages_url_for(@client_application.identifier_token, "non-existent_token")
 
       expect(response).to have_http_status(400)
-      expect(response.body).to_not be_nil
-      expect(response.body).to eq("Invalid chat number")
+      json_response = JSON.parse(response.body)
+      expect(json_response["errors"]).to eq("Invalid chat number")
     end
   end
 
@@ -44,8 +44,8 @@ RSpec.describe "ChatMessages Unhappy Scenarios", type: :request do
       post request_url, params: request_data
 
       expect(response).to have_http_status(400)
-      expect(response.body).to_not be_nil
-      expect(response.body).to eq("Invalid application token")
+      json_response = JSON.parse(response.body)
+      expect(json_response["errors"]).to eq("Invalid application token")
     end
 
     it "returns bad request when given a non-existent chat number" do
@@ -55,8 +55,8 @@ RSpec.describe "ChatMessages Unhappy Scenarios", type: :request do
       post request_url, params: request_data
 
       expect(response).to have_http_status(400)
-      expect(response.body).to_not be_nil
-      expect(response.body).to eq("Invalid chat number")
+      json_response = JSON.parse(response.body)
+      expect(json_response["errors"]).to eq("Invalid chat number")
     end
 
     it "returns bad request when not given message text value" do
@@ -66,8 +66,8 @@ RSpec.describe "ChatMessages Unhappy Scenarios", type: :request do
       post request_url, params: request_data
 
       expect(response).to have_http_status(400)
-      expect(response.body).to_not be_nil
-      expect(response.body).to eq("param is missing or the value is empty: message")
+      json_response = JSON.parse(response.body)
+      expect(json_response["errors"]).to eq("param is missing or the value is empty: message")
     end
   end
 
@@ -79,8 +79,8 @@ RSpec.describe "ChatMessages Unhappy Scenarios", type: :request do
       get "#{messages_url}/#{chat_message.identifier_number}"
 
       expect(response).to have_http_status(400)
-      expect(response.body).to_not be_nil
-      expect(response.body).to eq("Invalid application token")
+      json_response = JSON.parse(response.body)
+      expect(json_response["errors"]).to eq("Invalid application token")
     end
 
     it "returns bad request when given a non-existent chat number" do
@@ -90,8 +90,8 @@ RSpec.describe "ChatMessages Unhappy Scenarios", type: :request do
       get "#{messages_url}/#{chat_message.identifier_number}"
 
       expect(response).to have_http_status(400)
-      expect(response.body).to_not be_nil
-      expect(response.body).to eq("Invalid chat number")
+      json_response = JSON.parse(response.body)
+      expect(json_response["errors"]).to eq("Invalid chat number")
     end
 
     it "returns bad request when given a non-existent message number" do
@@ -100,8 +100,8 @@ RSpec.describe "ChatMessages Unhappy Scenarios", type: :request do
       get "#{messages_url}/non-existent_token"
 
       expect(response).to have_http_status(400)
-      expect(response.body).to_not be_nil
-      expect(response.body).to eq("Invalid message number")
+      json_response = JSON.parse(response.body)
+      expect(json_response["errors"]).to eq("Invalid message number")
     end
   end
 
@@ -114,8 +114,8 @@ RSpec.describe "ChatMessages Unhappy Scenarios", type: :request do
       patch "#{messages_url}/#{chat_message.identifier_number}", params: request_data
 
       expect(response).to have_http_status(400)
-      expect(response.body).to_not be_nil
-      expect(response.body).to eq("Invalid application token")
+      json_response = JSON.parse(response.body)
+      expect(json_response["errors"]).to eq("Invalid application token")
     end
 
     it "returns bad request when given a non-existent chat number" do
@@ -126,8 +126,8 @@ RSpec.describe "ChatMessages Unhappy Scenarios", type: :request do
       patch "#{messages_url}/#{chat_message.identifier_number}", params: request_data
 
       expect(response).to have_http_status(400)
-      expect(response.body).to_not be_nil
-      expect(response.body).to eq("Invalid chat number")
+      json_response = JSON.parse(response.body)
+      expect(json_response["errors"]).to eq("Invalid chat number")
     end
 
     it "returns bad request when given a non-existent message number" do
@@ -137,8 +137,8 @@ RSpec.describe "ChatMessages Unhappy Scenarios", type: :request do
       patch "#{messages_url}/non-existent-token", params: request_data
 
       expect(response).to have_http_status(400)
-      expect(response.body).to_not be_nil
-      expect(response.body).to eq("Invalid message number")
+      json_response = JSON.parse(response.body)
+      expect(json_response["errors"]).to eq("Invalid message number")
     end
 
     describe "optimistic lock" do

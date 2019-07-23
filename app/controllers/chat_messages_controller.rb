@@ -79,10 +79,10 @@ class ChatMessagesController < ApplicationController
   end
 
   def handle_error_for(invalid_parameter)
-    render status: :bad_request, json: "Invalid #{invalid_parameter}"
+    render status: :bad_request, json: {errors: "Invalid #{invalid_parameter}"}
   end
 
   def handle_missing_parameter(exception)
-    render status: :bad_request, json: exception.message
+    render status: :bad_request, json: {errors: exception.message}
   end
 end
